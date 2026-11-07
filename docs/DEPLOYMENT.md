@@ -1,25 +1,22 @@
-# GitHub and Pages deployment
+# Existing GitHub Pages deployment
 
-Create an empty repository named `OpportunityRadar-AI-Research` under your GitHub account. From this project's root:
+Repository: [Ruganji-Prince/Opportunities](https://github.com/Ruganji-Prince/Opportunities).
 
-```sh
-git init -b main
-git add .
-git commit -m "Build OpportunityRadar collection and dashboard"
-gh repo create Opportunities --public --source=. --remote=origin --push
-```
+Public dashboard: **https://ruganji-prince.github.io/Opportunities/**
 
-If the repository already exists, use these instead of the `gh repo create` command:
+GitHub Pages is enabled with `build_type: workflow` (GitHub Actions). The authenticated GitHub CLI account had repository admin access and successfully enabled Pages through the REST API. The original connector-only setup lacked that administration capability; no restriction was bypassed.
+
+The existing `deploy-pages.yml` installs the lockfile, tests and builds React, uploads `frontend/dist`, and deploys through `actions/deploy-pages`. It supports pushes to `main`, manual dispatch, and reuse by the collection workflow. Token-created data commits explicitly invoke the reusable deployment rather than relying on another push event.
 
 ```sh
-git remote add origin https://github.com/Ruganji-Prince/Opportunities.git
-git push -u origin main
+gh auth status
+gh workflow run deploy-pages.yml --repo Ruganji-Prince/Opportunities --ref main
+gh workflow run collect-opportunities.yml --repo Ruganji-Prince/Opportunities --ref main
+gh run list --repo Ruganji-Prince/Opportunities
 ```
 
-Use a private repository if preferred; GitHub Pages availability for private repositories depends on your plan. This project contains a sanitized profile and public listing records, never your CV or personal tracker.
+Normal collection runs every six hours at minute 17 UTC: 02:17, 08:17, 14:17 and 20:17 in Africa/Kigali and Africa/Johannesburg. GitHub may delay scheduled runs.
 
-In repository **Settings → Pages → Build and deployment**, select **GitHub Actions**. Enable Actions, allow workflow write permissions for collection, and run **Deploy dashboard to GitHub Pages**. The workflow builds, tests and uploads `frontend/dist`, then deploys the artifact. The default expected path is `https://Ruganji-Prince.github.io/Opportunities/`; that path is not proof of deployment. Verify it only after the deploy job reports success and the URL loads.
+If hosting is disabled later, the owner can select **GitHub Actions** in [Settings → Pages](https://github.com/Ruganji-Prince/Opportunities/settings/pages). With authorized admin-capable CLI credentials, an absent Pages site can be created with `gh api --method POST repos/Ruganji-Prince/Opportunities/pages -f build_type=workflow`. For an existing site use `--method PUT`. If GitHub denies the call, use the owner setting; do not evade access restrictions. Never paste or commit tokens.
 
-Run **Collect opportunities** manually to check production network access. View source-health results in the job summary and website Sources tab. The scheduled refresh and repository variable/Secrets are described in AUTOMATION.md. No continuously running backend or paid API is required.
-
-If local Git/gh authentication is unavailable, the connected GitHub integration can populate an existing repository, but this environment's available connector cannot create repositories or configure Pages settings. Creating the empty repository and selecting the Pages source are then the only account setup steps. Never paste tokens into chat or commit them.
+Verification checks the public page, assets, data feeds, unique record IDs and refresh timestamps. Real-Chrome QA can target production by setting `RADAR_QA_URL=https://ruganji-prince.github.io/Opportunities/` when running `node scripts/browser_qa.mjs`. It uses an isolated ignored browser profile. The expiry check advances only that test browser's clock, waits through a virtual 30-second update, and checks that a genuine listing leaves the active view and becomes searchable in Archive. Published data and real source deadlines are not changed.

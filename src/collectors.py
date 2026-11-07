@@ -6,7 +6,8 @@ from urllib.error import HTTPError
 from urllib.parse import urlsplit
 from urllib.robotparser import RobotFileParser
 import xml.etree.ElementTree as ET
-from .core import plain
+from .core import plain,relevant
+from .parsers import feed_records,euraxess_detail,article_detail,jobinrwanda_links,jobinrwanda_detail
 
 AGENT = 'OpportunityRadar/1.0 (+https://github.com/Ruganji-Prince/Opportunities)'
 
@@ -25,22 +26,47 @@ def fetch(url, settings, method='GET'):
             if attempt==settings['retries']: raise
         time.sleep(min(8,2**attempt))
 
-def check_robots(source, settings):
+def check_robots(source, settings, url=None, cache=None):
     # Documented public API endpoints are explicitly exposed for reading.
-    if source['adapter'] != 'rss': return
-    base = urlsplit(source['url'])
+    if source['adapter'] not in ('rss','euraxess','jobinrwanda'): return
+    url=url or source['url'];base = urlsplit(url)
     robots_url = f'{base.scheme}://{base.netloc}/robots.txt'
-    parser = RobotFileParser(); parser.parse(fetch(robots_url,settings).decode('utf-8','replace').splitlines())
-    if not parser.can_fetch(AGENT,source['url']): raise PermissionError('robots.txt disallows this feed')
+    parser=(cache or {}).get(robots_url)
+    if parser is None:
+        parser = RobotFileParser()
+        try:rules=fetch(robots_url,settings).decode('utf-8','replace').splitlines()
+        except HTTPError as e:
+            if e.code!=404:raise
+            # A missing robots file is not an access denial. Never ignore 401/403/429.
+            rules=[]
+        parser.parse(rules)
+        if cache is not None:cache[robots_url]=parser
+    if not parser.can_fetch(AGENT,url): raise PermissionError('robots.txt disallows this URL')
 
 def collect(source, settings):
-    check_robots(source,settings)
+    robots={};check_robots(source,settings,cache=robots)
     body = fetch(source['url'],settings)
     adapter = source['adapter']
-    if adapter=='rss':
-        root = ET.fromstring(body)
-        for item in root.findall('.//item'):
-            yield {'title':item.findtext('title',''),'url':item.findtext('link',''),'description':item.findtext('{http://purl.org/rss/1.0/modules/content/}encoded') or item.findtext('description',''),'location':'unknown'}
+    if adapter in ('rss','euraxess','jobinrwanda'):
+        rows=jobinrwanda_links(body.decode('utf-8','replace'),source['url']) if adapter=='jobinrwanda' else feed_records(body,source)
+        detailed=0
+        for raw in rows:
+            if not relevant(raw):continue
+            if source.get('details') or adapter in ('euraxess','jobinrwanda'):
+                if detailed>=source.get('detail_limit',20):
+                    if adapter=='jobinrwanda':break
+                else:
+                    try:
+                        check_robots(source,settings,raw['url'],robots)
+                        time.sleep(settings['request_delay_seconds'])
+                        html=fetch(raw['url'],settings).decode('utf-8','replace')
+                        parser=euraxess_detail if adapter=='euraxess' else jobinrwanda_detail if adapter=='jobinrwanda' else article_detail
+                        raw=parser(html,raw)
+                    except Exception as e:
+                        raw['detail_error']=f'{type(e).__name__}: {str(e)[:160]}'
+                        if adapter=='jobinrwanda':continue
+                    detailed+=1
+            yield raw
         return
     data=json.loads(body)
     if adapter=='greenhouse':

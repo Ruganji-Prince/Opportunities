@@ -1,6 +1,6 @@
 # Architecture and data contract
 
-Python 3.11+ runs offline-testable normalization, matching, deduplication and deadline logic. Public JSON APIs and an RSS feed provide live records. Adapters never bypass authentication, CAPTCHAs or robots restrictions. A source is staged before merge: a partial download or schema failure preserves the last verified records. Missing listings are not automatically declared closed.
+Python 3.11+ runs offline-testable normalization, matching, deduplication and deadline logic. Public JSON APIs, institutional and regional RSS feeds, and robots-permitted public announcement pages provide live records. Adapters never bypass authentication, CAPTCHAs or robots restrictions. A source is staged before merge: a partial download or schema failure preserves the last verified records. Missing listings are not automatically declared closed.
 
 The pipeline exports active records, an archive, source-health status and successful alert-delivery IDs under `data/`. Writes use atomic replacement. Canonical URLs determine stable IDs; normalized title, organization and location provide a secondary duplicate check. Existing first-discovered timestamps survive updates. Changed deadlines update the existing record. Unknown application status remains unknown rather than being asserted open.
 

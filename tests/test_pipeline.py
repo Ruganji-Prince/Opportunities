@@ -80,6 +80,22 @@ class PipelineTests(unittest.TestCase):
     def test_deadline_change(self):
         refresh(self.root,self.rows(),NOW);r=refresh(self.root,self.rows('2026-12-01T12:00:00Z'),NOW)
         self.assertEqual(r['modified'],1);self.assertEqual(r['new'],0)
+    def test_repeated_collection_updates_without_duplicates(self):
+        refresh(self.root,self.rows(),NOW)
+        before=json.loads((self.root/'data/opportunities.json').read_text())
+        r=refresh(self.root,self.rows(),NOW)
+        after=json.loads((self.root/'data/opportunities.json').read_text())
+        self.assertEqual((r['new'],r['modified'],len(after)),(0,0,1));self.assertEqual(after[0]['id'],before[0]['id']);self.assertEqual(after[0]['first_discovered'],before[0]['first_discovered'])
+    def test_salary_change_counts_as_update(self):
+        refresh(self.root,self.rows(),NOW)
+        def updated(s,c):
+            rows=self.rows()(s,c);rows[0]['salary']='Published salary changed';return rows
+        self.assertEqual(refresh(self.root,updated,NOW)['modified'],1)
+    def test_clock_advance_archives_previous_active_record(self):
+        refresh(self.root,self.rows(),NOW)
+        later=datetime(2026,11,10,12,tzinfo=timezone.utc)
+        result=refresh(self.root,self.rows(),later)
+        self.assertEqual((result['active'],result['archived'],result['expired']),(0,1,1))
     def test_expired_archived(self):
         r=refresh(self.root,self.rows('2026-10-01T12:00:00Z'),NOW);self.assertEqual(r['active'],0);self.assertEqual(r['archived'],1)
     def test_no_credentials_no_delivery_claim(self):

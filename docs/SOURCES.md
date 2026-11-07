@@ -11,9 +11,25 @@ Configured live integrations:
 | Opportunities for Africans | RSS | Africa-focused scholarships, grants, development and competitions | Public syndication feed, checked against robots.txt, publisher attribution retained |
 | Remotive | Public API | Remote engineering careers | [API rules](https://github.com/remotive-com/remote-jobs-api); links point to Remotive, source attribution shown |
 
-Each source's actual current collection result, last success, count and failure message is in `data/refresh_status.json` and the dashboard Sources view. A working API does not imply every record is relevant or eligible. OFA is an aggregator; follow its article to the organizer and confirm requirements. Research coverage currently relies on employer and regional feeds; broad university PhD admissions coverage needs additional reviewed adapters.
+Expanded research and regional integrations:
 
-EURAXESS, Zindi and Job in Rwanda are visible manual discovery entries. They are not claimed as connected or scraped. Other suggested sites (FindAPhD, Academic Positions, jobs.ac.uk, Kaggle, Devpost, F6S, MIFOTRA, AIMS, AU and university sites) require individual access-policy and extraction reviews before integration. No anti-bot bypass is implemented. Earlier candidate boards for DeepMind and Hugging Face were unavailable and are not included as working integrations.
+| Publisher / feed | Method | Verified scope |
+| --- | --- | --- |
+| EURAXESS | Public RSS and robots-permitted detail pages | Research and doctoral announcements, source-labeled timestamp deadlines and host countries |
+| DAAD PhDGermany | Official structured RSS | Doctoral positions including AI, computing, materials and engineering; explicit applicationDeadline and location fields |
+| University of Bath | Official vacancy RSS | Research, scientific and engineering roles; source-published closing dates |
+| Oxford Computer Science | Official research and studentship RSS | Research announcements; the studentship feed was empty during verification |
+| University of Southampton | Official funded-PhD RSS | Funded doctoral category; feed was empty during verification |
+| Opportunities for Africans PhD/fellowship/contest feeds | Publisher RSS and public articles | African audiences, scholarships and innovation competitions; confirm eligibility per organizer |
+| Job in Rwanda | Robots-permitted public index and /job/ detail pages | Rwanda/East African opportunities; labeled deadlines in source DD/MM/YYYY format |
+
+There are 16 enabled integrations across 12 publishers. Each integration's actual status, last success, count and detail failures are in `data/refresh_status.json` and the Sources view. A successful empty feed remains empty. Funding availability does not establish coverage of international tuition, travel or every nationality. OFA and DAAD are aggregators: follow the announcement to the organizer and verify conditions.
+
+The official feed directories are [Oxford](https://www.cs.ox.ac.uk/rssfeeds.html), [Bath](https://www.bath.ac.uk/jobs/rss/), [Southampton](https://jobs.soton.ac.uk/RSS/) and [DAAD](https://www.daad.de/en/studying-in-germany/phd-studies-research/phd-germany/). EURAXESS exposes its public `/job-feed`. Robots rules are checked for feed and detail URLs. A missing robots.txt (404) is treated as absence of a policy file; explicit 401/403 access denials and 429 rate limits are not ignored.
+
+Zindi remains discovery-only: its [terms](https://zindi.world/terms) restrict monitoring and republication. No datasets, authenticated content or competition listings are scraped. Job in Rwanda's `/rss.xml` was rejected because it contains FAQ entries rather than vacancies. AIMS was reviewed but no stable structured opportunity feed was verified. Surrey's doctoral RSS was empty. Nottingham's certificate validation failed; certificate verification was not disabled. Other suggested sites require separate policy and schema review. No anti-bot bypass is implemented.
+
+HTML enrichment is bounded per source and retains feed evidence when an optional detail page fails. RSS declaration encodings and Atom namespaces are supported. Unknown deadlines and funding remain unknown; no placeholder opportunities are published.
 
 To add a source:
 

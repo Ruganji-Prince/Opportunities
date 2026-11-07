@@ -29,9 +29,10 @@ def refresh(root=ROOT, collector=collect, now=None, only=None):
             health.append(state); successes+=1; continue
         try:
             # Stage a whole source before merging; partial failures never erase prior data.
-            staged=[]
+            staged=[];detail_failures=0
             source_settings={**settings,'retries':0} if source['id']=='remotive' else settings
             for raw in collector(source,source_settings):
+                detail_failures+=bool(raw.get('detail_error'))
                 o=match(normalize(raw,source,stamp),profile,weights)
                 # Do not fill the public database with unrelated business roles.
                 if relevant(o): staged.append(o)
@@ -40,12 +41,13 @@ def refresh(root=ROOT, collector=collect, now=None, only=None):
                 if existing:
                     o['first_discovered']=existing['first_discovered']
                     o['last_updated']=existing.get('last_updated',existing['first_discovered'])
-                    fields=('title','description','deadline','deadline_precision','application_status','location','relevance_score')
+                    fields=('title','organization','description','application_url','deadline','deadline_precision','deadline_timezone','application_status','location','remote','salary','source_category','funding_evidence','funding_status','relevance_score')
                     if any(o.get(k)!=existing.get(k) for k in fields): modified+=1; o['last_updated']=stamp
-                    o['link_validation']=existing.get('link_validation',o['link_validation'])
+                    if not o['link_validation'].startswith('HTTP GET succeeded'):o['link_validation']=existing.get('link_validation',o['link_validation'])
                 else: new+=1; o['last_updated']=stamp
                 records[o['id']]=o
-            state.update(status='ok',count=len(staged),last_success=stamp,message='Public source retrieved and schema parsed')
+            state.update(status='ok',count=len(staged),last_success=stamp,detail_failures=detail_failures,message='Public source retrieved and schema parsed'+(f'; {detail_failures} details unavailable, feed evidence retained' if detail_failures else ''))
+            log.info('%s: %d relevant records; %d unavailable detail pages',source['id'],len(staged),detail_failures)
             successes+=1
         except Exception as e:
             log.warning('%s: %s',source['id'],str(e))

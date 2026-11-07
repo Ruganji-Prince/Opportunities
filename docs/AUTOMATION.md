@@ -1,6 +1,6 @@
 # Updates and alerts
 
-`collect-opportunities.yml` runs at minute 17 every six hours (UTC), with manual workflow dispatch. GitHub may delay scheduled runs. Actions must be enabled on the repository. Each adapter reports failure independently, so one broken feed does not erase the others. A total failure fails the workflow and preserves prior success timestamps. Deadline checks and archival run during every collection, at least daily when schedules execute.
+`collect-opportunities.yml` runs at minute 17 every six hours (UTC), with manual workflow dispatch. This is 02:17, 08:17, 14:17 and 20:17 in Africa/Kigali / Africa/Johannesburg. GitHub may delay scheduled runs. Actions must be enabled on the repository. Each adapter reports failure independently, so one broken feed does not erase the others. A total failure fails the workflow and preserves prior success timestamps. Deadline checks and archival run during every collection, at least daily when schedules execute.
 
 Only meaningful record, source-health or notification-state changes create commits. Volatile verification timestamps alone do not. Therefore the site's displayed last successful collection is the last **published** successful collection; later unchanged checks can be seen in Actions logs. The collector calls a reusable Pages workflow after writing data because pushes using `GITHUB_TOKEN` do not themselves trigger another push workflow.
 

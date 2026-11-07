@@ -44,6 +44,7 @@ def check_robots(source, settings, url=None, cache=None):
     if not parser.can_fetch(AGENT,url): raise PermissionError('robots.txt disallows this URL')
 
 def collect(source, settings):
+    if source.get('permission_required') and not source.get('permission_granted'):raise PermissionError('Source requires prior written permission; collection disabled')
     robots={};check_robots(source,settings,cache=robots)
     body = fetch(source['url'],settings)
     adapter = source['adapter']
@@ -72,7 +73,9 @@ def collect(source, settings):
     if adapter=='greenhouse':
         for j in data['jobs']:
             if not plain(j.get('title')): continue
-            yield {'title':j['title'],'url':j['absolute_url'],'description':j.get('content',''),'location':j.get('location',{}).get('name','unknown')}
+            location=(j.get('location') or {}).get('name') or 'unknown'
+            if source.get('location_keywords') and not any(k.lower() in location.lower() for k in source['location_keywords']):continue
+            yield {'title':j['title'],'url':j['absolute_url'],'description':j.get('content',''),'location':location}
     elif adapter=='ashby':
         for j in data['jobs']:
             if not j.get('isListed',True): continue

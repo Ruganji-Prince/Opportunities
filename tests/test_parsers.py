@@ -57,6 +57,10 @@ class DetailTests(unittest.TestCase):
     def test_robots_denial(self):
         with patch('src.collectors.fetch',return_value=b'User-agent: *\nDisallow: /private/'):
             with self.assertRaises(PermissionError):check_robots({**SOURCE,'url':'https://example.org/private/feed'},{})
+    def test_terms_restriction_stops_collection_before_network(self):
+        with patch('src.collectors.fetch') as network:
+            with self.assertRaises(PermissionError):list(collect({**SOURCE,'permission_required':True,'permission_granted':False},{}))
+        network.assert_not_called()
     def test_missing_robots_allows_published_feed(self):
         with patch('src.collectors.fetch',side_effect=HTTPError('https://example.org/robots.txt',404,'Not Found',{},None)):check_robots(SOURCE,{})
     def test_forbidden_robots_is_not_bypassed(self):

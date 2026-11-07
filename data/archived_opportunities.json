@@ -244,6 +244,140 @@
     "applicant_coverage": "unknown",
     "application_opening_date": null,
     "application_status": "unknown",
+    "application_url": "https://oneacrefund.org/vacancies?gh_jid=8029925",
+    "category": "industry",
+    "deadline": "2026-09-26",
+    "deadline_evidence": "Application Deadline 26 September 2026 [exact time and timezone not verified]",
+    "deadline_precision": "date",
+    "deadline_status": "Expired",
+    "deadline_timezone": null,
+    "description": "About One Acre Fund Founded in 2006, One Acre Fund equips 5.5 million smallholder farmers to make their farms more productive. Across nine countries that together are home to two-thirds of Africa's farmers, we provide high-quality farm supplies, tree seedlings, accessible credit, modern agronomic training, and a wide range of other agricultural services. On average, this model enables any farmer to increase their income and assets on supported land by more than 35 percent, while permanently improving their resilience. This is all made possible by our team of 9,000+ full-time staff, drawn from diverse backgrounds and professions. To learn more, please see our Why Work Here blog post. Our Kenya program, founded in 2006, operates under the local brand Tupande. Close to 500 staff in our Kakamega headquarters support 1,747 field staff and serve more than 1 million farmers. In Nairobi, around 50 staff support global functions like procurement, recruitment, government relations, and communications. About the Role Seeking a highly hands-on AI and automation engineer to design, build, and scale intelligent solutions, integrations, and workflows that improve customer experience, operational efficiency, and farmer impact. Responsibilities Drive AI and automation strategy to support organizational priorities Partner with business leaders to identify opportunities where AI, automation, and intelligent systems can improve customer experience, operational efficiency, decision-making, and business performance Translate organizational priorities into a clear pipeline of high-impact AI and automation initiatives Support the development and execution of Tupande's AI and automation roadmap Ensure AI and automation investments remain aligned to business priorities and deliver measurable value Design, build and deliver intelligent business solutions Personally lead the full lifecycle (design, development, deployment, and scaling) of AI-enabled solutions, workflows, and automation capabilities Architect and integrate AI solutions seamlessly across existing enterprise applications, data platforms, and operational systems Build scalable, secure, and maintainable solutions that solve real business problems and fit specific operational needs Balance innovation and delivery speed with long-term technical sustainability, risk management, and strategic requirements Guide technical decision-making across AI, analytics, and process improvement initiatives Maintain high engineering standards through rigorous architecture, code, and technical reviews Drive organizational transformation through AI and automation Champion adoption of automation, AI, and intelligent ways of working across the organization Identify opportunities to simplify processes, reduce manual effort, improve controls, and enhance decision quality Support the responsible adoption of emerging AI technologies and best practices Ensure AI and automation initiatives are operationalized successfully and achieve intended outcomes Build a high-performing AI and automation team Mentor engineers to strengthen AI, automation, and integration capabilities through hands-on guidance, pair-building, and technical reviews Establish governance and operating standards to ensure consistent, high-quality execution Drive a culture of innovation, accountability, and continuous learning. Deliver solutions that consistently meet business goals, timelines, and adoption targets Monitor performance and maximize business value Monitor the performance, adoption, and impact of AI and automation solutions across the organization Proactively identify operational, technical, ethical, and adoption risks and implement mitigation strategies Continuously improve the effectiveness, sustainability, and value realization of deployed solutions Ensure the AI and automation portfolio continues to support Tupande's long-term growth and strategic ambitions Career Growth and Development We have a strong culture of constant learning and we invest in developing our people. You’ll have weekly check-ins with your manager, access to mentorship and training programs, and regular feedback on your performance. We hold career reviews every six months, and set aside time to discuss your aspirations and career goals. You’ll have the opportunity to shape a growing organization and build a rewarding long-term career. Qualifications Across all roles, these are the general qualifications we look for . For this role specifically, you will have: Knowledge: Bachelor's degree or higher in Computer Science, Software Engineering, Data Science, Artificial Intelligence, Engineering, Information Systems, or related technical field required Strong understanding of artificial intelligence, automation, machine learning, analytics, and emerging technologies Strong understanding of business process improvement, operational systems, and digital transformation principles Good understanding of enterprise systems, integrations, software engineering, and technology platforms Strong understanding of customer-centric design and technology adoption principles Strong understanding of Tupande's operating model, customer journeys, and strategic priorities Technical skills Strong AI engineering, automation engineering, and software development capability Demonstrated experience building and deploying production-grade AI, automation, and intelligent workflow solutions Strong solution design, systems-thinking, and workflow orchestration capability Strong API, integration, middleware, and enterprise systems integration experience Experience integrating AI capabilities into business processes, enterprise systems, and operational workflows Ability to translate business challenges into practical AI and automation solutions Ability to evaluate technical trade-offs and guide solution design decisions Strong experimentation, analytical, and problem-solving capability Ability to assess emerging technologies and determine practical business application Other A proven track record of personally building and deploying production-grade AI and automation solutions, combined with a builder mindset for solving real-world business problems. Ability to balance hands-on delivery with effective team leadership, coaching, and mentorship to strengthen technical capability. Strong business and operational acumen, with the ability to navigate complex priorities and balance innovation against operational requirements. Proven ability to influence stakeholders and drive the organizational adoption of new technologies. A strong ownership mindset, with clear accountability for delivering measurable business outcomes and enhancing the customer experience. Driven by a passion for leveraging technology to improve farmer impact, combined with high learning agility and a commitment to continuous improvement. Preferred Start Date As soon as possible Job Location Flexible: Poland, Spain, Portugal, Estonia, Romania, South Africa, and Kenya Benefits Health insurance, housing, and comprehensive benefits Contract Duration 1 Year. Eligibility One Acre Fund can support a work permit for this role. However, nationals of (or those with an extensive professional background and work history in) our countries of operation are preferred. Application Deadline 26 September 2026. Please note that we hire on a rolling basis which means that applications are reviewed and processed on a continuous basis until a hire is made. One Acre Fund never asks candidates to pay any money or pay for tests at any stage of the interview process. Official One Acre Fund emails will always arrive from an @ oneacrefund.org address. Please report any suspicious communication here ( globalhotline@oneacrefund.org ), but do not send applications or application materials to this email address. Diversity, Equity, Inclusion (DEI), and anti-racism are deeply connected to our organization’s mission and purpose. One Acre Fund aspires to build a culture where all staff feel consistently valued, represented, and connected – so that our team can thrive as professionals, and achieve exceptional impact for the farmers we serve. We are committed to equal employment opportunity regardless of race, color, ancestry, religion, sex, national origin, sexual orientation, age, marital status, disability, gender, gender identity or expression. We are proud to be an equal opportunity workplace.",
+    "eligibility": "restricted",
+    "eligibility_evidence": [
+      "Senior role; extensive experience not demonstrated"
+    ],
+    "eligible_nationalities": "unknown",
+    "first_discovered": "2026-11-07T17:10:27.136947+00:00",
+    "funding_amount": null,
+    "funding_currency": null,
+    "funding_evidence": "",
+    "funding_status": "unknown",
+    "geographic_scope": [
+      "Africa",
+      "East Africa"
+    ],
+    "host_continent": "Africa",
+    "host_country": "Kenya",
+    "id": "c7d95c15d9be9d82b52e",
+    "last_updated": "2026-11-07T17:10:27.136947+00:00",
+    "last_verified": "2026-11-07T17:10:27.136947+00:00",
+    "link_validation": "Source supplied URL; individual link not yet checked",
+    "location": "Flexible: Poland, Spain, Portugal, Estonia, Romania, South Africa, and Kenya",
+    "organization": "One Acre Fund",
+    "original_url": "https://oneacrefund.org/vacancies?gh_jid=8029925",
+    "provenance": {
+      "deadline": "Application Deadline 26 September 2026 [exact time and timezone not verified]",
+      "listing": "https://boards-api.greenhouse.io/v1/boards/oneacrefund/jobs?content=true"
+    },
+    "relevance_explanation": [
+      "Profile skills mentioned: artificial intelligence, machine learning",
+      "Research interests mentioned: health, sustainability",
+      "Career category: industry; eligibility: restricted",
+      "Score is prioritization, not an acceptance probability"
+    ],
+    "relevance_score": 30,
+    "remote": "unknown",
+    "required_qualifications": "unknown; consult original announcement",
+    "required_skills": "unknown",
+    "salary": "unknown",
+    "scholarship_information": "unknown",
+    "skills_not_demonstrated": [
+      "health",
+      "sustainability"
+    ],
+    "source_category": "",
+    "source_id": "oneacrefund",
+    "source_name": "One Acre Fund — Rwanda and East Africa",
+    "startup_requirements": "not applicable",
+    "subcategory": "job",
+    "tags": [
+      "artificial intelligence",
+      "health",
+      "machine learning",
+      "sustainability"
+    ],
+    "title": "Tupande AI Engineering Lead (Fixed-term)"
+  },
+  {
+    "applicant_coverage": "unknown",
+    "application_opening_date": null,
+    "application_status": "unknown",
+    "application_url": "https://oneacrefund.org/vacancies?gh_jid=8029869",
+    "category": "industry",
+    "deadline": "2026-09-26",
+    "deadline_evidence": "Application Deadline 26 September 2026 [exact time and timezone not verified]",
+    "deadline_precision": "date",
+    "deadline_status": "Expired",
+    "deadline_timezone": null,
+    "description": "About One Acre Fund Founded in 2006, One Acre Fund equips 5.5 million smallholder farmers to make their farms more productive. Across nine countries that together are home to two-thirds of Africa's farmers, we provide high-quality farm supplies, tree seedlings, accessible credit, modern agronomic training, and a wide range of other agricultural services. On average, this model enables any farmer to increase their income and assets on supported land by more than 35 percent, while permanently improving their resilience. This is all made possible by our team of 9,000+ full-time staff, drawn from diverse backgrounds and professions. To learn more, please see our Why Work Here blog post. Our Kenya program, founded in 2006, operates under the local brand Tupande. Close to 500 staff in our Kakamega headquarters support 1,747 field staff and serve more than 1 million farmers. In Nairobi, around 50 staff support global functions like procurement, recruitment, government relations, and communications. About the Role Seeking an exceptional AI and automation engineering leader to build Tupande's automation capability, lead high-impact solutions, and help scale farmer impact through hands-on engineering, business partnership, and technical leadership. Responsibilities Set and drive Tupande's AI strategy, automation and engineering Partner with senior leadership to identify how automation, AI, engineering, and technology can accelerate Tupande's strategic priorities and farmer impact Translate business needs into a clear engineering and automation roadmap aligned to the organization's long-term vision Evaluate emerging technologies and recommend investments that improve customer experience, operational efficiency, scalability, and financial sustainability Act as a strategic thought partner to business leaders on opportunities, trade-offs, risks, and innovation priorities Lead the design and delivery of scalable AI, automation, and business solutions Ensure automation, AI, enterprise systems, integrations, and software solutions are designed to solve real business problems and deliver measurable value Guide solution architecture and engineering decisions to balance speed, quality, sustainability, and scalability Personally contribute to the design, review, prototyping, and delivery of high-priority automation, AI, integration, and software initiatives Conduct architecture reviews, solution reviews, and technical quality assessments to ensure solutions remain reliable, maintainable, secure, and scalable Establish and oversee integration standards across enterprise systems, AI platforms, automation solutions, middleware, APIs, and third-party technologies Ensure business systems exchange information reliably and efficiently through well-designed integration patterns and architectures Oversee the successful delivery, adoption, and performance of Tupande’s automation and engineering portfolio Build and strengthen Tupande's AI & automation engineering capability Lead, coach, and develop a high-performing engineering team, fostering a culture of ownership, innovation, and disciplined execution. Establish robust governance and performance standards (SOPs) to ensure consistent delivery excellence, reliability, and continuous improvement. Build long-term technical leadership and succession pipelines by mentoring specialists in AI, automation, and integration aligned with strategic goals. Drive organizational transformation through automation and AI Champion the adoption of automation, AI, and modern engineering practices across the organization Identify opportunities to simplify processes, improve decision-making, reduce cost-to-serve, and enhance customer experience Ensure automation and AI initiatives are delivering measurable operational and business impact Position Tupande as a leader in the practical application of technology within agricultural operations Provide stewardship of the AI & automation engineering portfolio Monitor the health, performance, value realization, and sustainability of engineering investments across the organization Proactively manage technical, operational, and delivery risks Balance immediate delivery priorities with long-term platform, capability, and organizational needs Ensure the engineering portfolio continues to support business growth, resilience, and future strategic ambitions Maintain external awareness and organizational influence Stay informed on industry trends, emerging technologies, and leading engineering practices Build strong partnerships across One Acre Fund and external technology ecosystems Represent Tupande's engineering and automation priorities in strategic discussions and planning forums Continuously elevate the organization's understanding and effective use of technology Career Growth and Development We have a strong culture of constant learning and we invest in developing our people. You’ll have weekly check-ins with your manager, access to mentorship and training programs, and regular feedback on your performance. We hold career reviews every six months, and set aside time to discuss your aspirations and career goals. You’ll have the opportunity to shape a growing organization and build a rewarding long-term career. Qualifications Across all roles, these are the general qualifications we look for . For this role specifically, you will have: Knowledge Master’s degree in a relevant technical field (Computer Science, Software Engineering, Data Science, AI, Information Systems) or a Bachelor’s degree with relevant certifications. Comprehensive understanding of how AI, automation, and software engineering drive organizational strategy and business performance. Expert knowledge of enterprise systems, automation platforms, digital transformation, and organizational change management. Deep understanding of Tupande’s operating model, customer journeys, and long-term strategic ambitions. Technical skills Demonstrated expertise building and deploying production-grade AI, automation, and software solutions, including complex enterprise system integrations (APIs, middleware, third-party platforms). Strong solution architecture and systems-thinking, with the ability to translate strategic business priorities into scalable technical roadmaps and identify practical applications for emerging technologies. Proven ability to guide technical decision-making, evaluate complex trade-offs, and conduct rigorous architecture and code reviews. Robust portfolio management and prioritization capabilities to ensure sustained, high-impact delivery. Other Proven track record in hands-on delivery of production-grade technology solutions, balancing deep engineering contribution with effective leadership and capability building. Strategic leader with strong commercial and operational acumen, capable of influencing senior stakeholders and driving organizational change amidst ambiguity. Ownership-driven mindset, accountable for delivering measurable business outcomes and passionate about leveraging technology to maximize farmer impact Preferred Start Date As soon as possible Job Location Preferred office location: Nairobi, Kenya. Other office locations may be considered for the right candidate. Benefits Health insurance, housing, and comprehensive benefits Contract Duration 1 Year. Eligibility One Acre Fund can support a work permit for this role. However, nationals of (or those with an extensive professional background and work history in) our countries of operation are preferred. Application Deadline 26 September 2026. Please note that we hire on a rolling basis which means that applications are reviewed and processed on a continuous basis until a hire is made. One Acre Fund never asks candidates to pay any money or pay for tests at any stage of the interview process. Official One Acre Fund emails will always arrive from an @ oneacrefund.org address. Please report any suspicious communication here ( globalhotline@oneacrefund.org ), but do not send applications or application materials to this email address. Diversity, Equity, Inclusion (DEI), and anti-racism are deeply connected to our organization’s mission and purpose. One Acre Fund aspires to build a culture where all staff feel consistently valued, represented, and connected – so that our team can thrive as professionals, and achieve exceptional impact for the farmers we serve. We are committed to equal employment opportunity regardless of race, color, ancestry, religion, sex, national origin, sexual orientation, age, marital status, disability, gender, gender identity or expression. We are proud to be an equal opportunity workplace.",
+    "eligibility": "restricted",
+    "eligibility_evidence": [
+      "Senior role; extensive experience not demonstrated"
+    ],
+    "eligible_nationalities": "unknown",
+    "first_discovered": "2026-11-07T17:10:27.136947+00:00",
+    "funding_amount": null,
+    "funding_currency": null,
+    "funding_evidence": "",
+    "funding_status": "unknown",
+    "geographic_scope": [
+      "Africa",
+      "East Africa"
+    ],
+    "host_continent": "Africa",
+    "host_country": "Kenya",
+    "id": "f0c2c5be789ce888bc9f",
+    "last_updated": "2026-11-07T17:10:27.136947+00:00",
+    "last_verified": "2026-11-07T17:10:27.136947+00:00",
+    "link_validation": "Source supplied URL; individual link not yet checked",
+    "location": "Nairobi, Kenya",
+    "organization": "One Acre Fund",
+    "original_url": "https://oneacrefund.org/vacancies?gh_jid=8029869",
+    "provenance": {
+      "deadline": "Application Deadline 26 September 2026 [exact time and timezone not verified]",
+      "listing": "https://boards-api.greenhouse.io/v1/boards/oneacrefund/jobs?content=true"
+    },
+    "relevance_explanation": [
+      "Profile skills mentioned: none",
+      "Research interests mentioned: health, sustainability",
+      "Career category: industry; eligibility: restricted",
+      "Score is prioritization, not an acceptance probability"
+    ],
+    "relevance_score": 24,
+    "remote": "unknown",
+    "required_qualifications": "unknown; consult original announcement",
+    "required_skills": "unknown",
+    "salary": "unknown",
+    "scholarship_information": "unknown",
+    "skills_not_demonstrated": [
+      "health",
+      "sustainability"
+    ],
+    "source_category": "",
+    "source_id": "oneacrefund",
+    "source_name": "One Acre Fund — Rwanda and East Africa",
+    "startup_requirements": "not applicable",
+    "subcategory": "job",
+    "tags": [
+      "health",
+      "sustainability"
+    ],
+    "title": "Tupande Automation Engineering Lead (Fixed-term)"
+  },
+  {
+    "applicant_coverage": "unknown",
+    "application_opening_date": null,
+    "application_status": "unknown",
     "application_url": "https://www.opportunitiesforafricans.com/the-francesouth-africa-scholarship-programme-2027-for-southern-africans-to-study-in-france",
     "category": "research",
     "deadline": "2026-10-08",

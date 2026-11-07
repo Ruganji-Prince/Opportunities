@@ -10,7 +10,7 @@ Expanded local release snapshot: 530 active records and 19 archived records, inc
 
 Verification completed locally:
 
-- **57 backend tests** pass, including real-source-shaped feed/detail extraction, encodings, Atom, robots denial handling, source outages, updated deadlines and salaries, repeated ingestion without duplicate IDs, incomplete-institution duplicate safety, expiry/archival, timezones/DST, CV matching and alert deduplication.
+- **58 backend tests** pass, including real-source-shaped feed/detail extraction, encodings, Atom, robots denial handling, source outages, updated deadlines and salaries, repeated ingestion without duplicate IDs, incomplete-institution duplicate safety, expiry/archival, timezones/DST, CV matching and alert deduplication.
 - **11 frontend tests** pass, including deadline/relevance ordering, changes to published deadlines, approaching-deadline warning transitions, date-only uncertainty, empty filters, URL safety and tracker import/export.
 - TypeScript and the production Vite build succeed using the existing pinned lockfile.
 - Real Chrome loads production-format feeds, checks counts and unique IDs, confirms deadline order, persists bookmarks/notes across reload, handles empty searches and source health, and fits a 390px viewport without overflow.

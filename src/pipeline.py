@@ -25,7 +25,8 @@ def refresh(root=ROOT, collector=collect, now=None, only=None):
         if not source['enabled'] or (only and source['id'] not in only):
             state['message']='Not enabled or not selected'; health.append(state); continue
         if source['id']=='remotive' and state['last_success'] and (now-datetime.fromisoformat(state['last_success'])).total_seconds()<6*3600:
-            state.update(status='cached',count=prior_health[source['id']].get('count',0),message='Six-hour minimum interval; retained last successful feed')
+            retained=sum(o.get('source_id')==source['id'] for o in previous)
+            state.update(status='cached',count=retained,message='Six-hour minimum interval; retained stored source records')
             health.append(state); successes+=1; continue
         try:
             # Stage a whole source before merging; partial failures never erase prior data.

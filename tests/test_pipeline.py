@@ -96,6 +96,12 @@ class PipelineTests(unittest.TestCase):
         later=datetime(2026,11,10,12,tzinfo=timezone.utc)
         result=refresh(self.root,self.rows(),later)
         self.assertEqual((result['active'],result['archived'],result['expired']),(0,1,1))
+    def test_rate_limited_cache_reports_retained_records_without_fetch(self):
+        (self.root/'config/sources.yaml').write_text(json.dumps([{**SOURCE,'id':'remotive'}]))
+        refresh(self.root,self.rows(),NOW)
+        def no_fetch(s,c):raise AssertionError('Fresh cache must avoid another provider request')
+        result=refresh(self.root,no_fetch,datetime(2026,11,7,13,tzinfo=timezone.utc))
+        self.assertEqual(result['sources'][0]['status'],'cached');self.assertEqual(result['sources'][0]['count'],1)
     def test_expired_archived(self):
         r=refresh(self.root,self.rows('2026-10-01T12:00:00Z'),NOW);self.assertEqual(r['active'],0);self.assertEqual(r['archived'],1)
     def test_no_credentials_no_delivery_claim(self):

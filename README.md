@@ -2,6 +2,8 @@
 
 Personal research, AI career and innovation intelligence, with automated public-source collection, transparent profile matching and a live deadline dashboard.
 
+Published source: [Ruganji-Prince/Opportunities](https://github.com/Ruganji-Prince/Opportunities). GitHub CI has passed 30 backend tests, 9 frontend tests, and the production build. Initial Pages hosting requires the repository owner to select **GitHub Actions** in [Settings → Pages](https://github.com/Ruganji-Prince/Opportunities/settings/pages), then rerun the [deployment workflow](https://github.com/Ruganji-Prince/Opportunities/actions/workflows/deploy-pages.yml). Automatic Pages enablement was denied by GitHub's integration permissions; no live dashboard URL has yet been verified.
+
 Built for an MSc AI candidate at Carnegie Mellon University Africa (expected May 2027), with mechanical engineering, applied ML, scientific computing, energy and materials interests. The sanitized profile combines the supplied brief with locally reviewed CV evidence, including prosthetics research, CAD/CAM training, explainable ML, embedded systems and energy/health projects. The raw CV and contact details are excluded. Nationality and work authorization remain unknown.
 
 ## Run locally

@@ -1,0 +1,11 @@
+[
+ {"id":"anthropic","name":"Anthropic","adapter":"greenhouse","url":"https://boards-api.greenhouse.io/v1/boards/anthropic/jobs?content=true","organization":"Anthropic","enabled":true,"policy":"https://docs.greenhouse.io/job-board.html"},
+ {"id":"recursion","name":"Recursion Pharmaceuticals","adapter":"greenhouse","url":"https://boards-api.greenhouse.io/v1/boards/recursionpharmaceuticals/jobs?content=true","organization":"Recursion Pharmaceuticals","enabled":true,"policy":"https://docs.greenhouse.io/job-board.html"},
+ {"id":"cohere","name":"Cohere","adapter":"ashby","url":"https://api.ashbyhq.com/posting-api/job-board/cohere","organization":"Cohere","enabled":true,"policy":"https://developers.ashbyhq.com/docs/public-job-posting-api"},
+ {"id":"cern","name":"CERN","adapter":"smartrecruiters","url":"https://api.smartrecruiters.com/v1/companies/CERN/postings?limit=100","organization":"CERN","enabled":true,"policy":"https://developers.smartrecruiters.com/docs/posting-api"},
+ {"id":"ofa","name":"Opportunities for Africans","adapter":"rss","url":"https://www.opportunitiesforafricans.com/feed/","organization":"unknown","enabled":true,"policy":"Public syndication feed; attribution and original article link retained"},
+ {"id":"remotive","name":"Remotive","adapter":"remotive","url":"https://remotive.com/api/remote-jobs?category=software-dev","organization":"unknown","enabled":true,"policy":"https://github.com/remotive-com/remote-jobs-api; attribute and link to Remotive; max four requests/day"},
+ {"id":"euraxess","name":"EURAXESS","adapter":"manual","url":"https://euraxess.ec.europa.eu/jobs","enabled":false,"policy":"Discovery directory only; no approved stable feed configured"},
+ {"id":"zindi","name":"Zindi competitions","adapter":"manual","url":"https://zindi.world/competitions","enabled":false,"policy":"Manual discovery only; no stable permitted public API verified"},
+ {"id":"jobinrwanda","name":"Job in Rwanda","adapter":"manual","url":"https://www.jobinrwanda.com/","enabled":false,"policy":"Manual discovery only; adapter requires policy and schema review"}
+]

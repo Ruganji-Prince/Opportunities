@@ -1,0 +1,58 @@
+name: Collect opportunities
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+  issues: write
+  pages: write
+  id-token: write
+concurrency:
+  group: opportunity-collection
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - name: Preserve comparable previous state
+        run: cp -r data /tmp/radar-before
+      - name: Collect independently from public sources
+        run: python -m src.pipeline
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          ENABLE_GITHUB_ALERTS: ${{ vars.ENABLE_GITHUB_ALERTS }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          ALERT_FROM: ${{ secrets.ALERT_FROM }}
+          ALERT_TO: ${{ secrets.ALERT_TO }}
+      - run: python -m src.pipeline --validate
+      - name: Commit meaningful changes only
+        id: commit
+        run: |
+          if python scripts/has_changes.py /tmp/radar-before data; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add data/
+            git commit -m 'Refresh opportunity intelligence'
+            git push
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'No material data changes; refresh check recorded in this workflow log.'
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+          fi
+      - name: Refresh report
+        if: always()
+        run: cat data/refresh_status.json >> "$GITHUB_STEP_SUMMARY"
+  deploy:
+    needs: collect
+    if: needs.collect.outputs.changed == 'true'
+    uses: ./.github/workflows/deploy-pages.yml

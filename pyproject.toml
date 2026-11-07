@@ -1,0 +1,7 @@
+[project]
+name = "opportunityradar"
+version = "1.0.0"
+requires-python = ">=3.11"
+description = "Transparent personal opportunity discovery and deadline intelligence"
+[tool.pytest.ini_options]
+pythonpath = ["."]

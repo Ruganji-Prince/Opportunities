@@ -1,0 +1,1 @@
+{"timeout_seconds":25,"retries":2,"request_delay_seconds":1,"minimum_score":55,"alert_threshold_hours":[168,72,24],"stale_after_days":7}

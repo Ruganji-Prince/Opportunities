@@ -82,7 +82,9 @@ def _collect(source, settings):
                     try:
                         check_robots(source,settings,raw['url'],robots)
                         time.sleep(settings['request_delay_seconds'])
-                        html=fetch(raw['url'],settings).decode('utf-8','replace')
+                        # Detail outages must not exhaust the scheduled job's budget.
+                        detail_settings={**settings,'timeout_seconds':min(settings.get('timeout_seconds',25),settings.get('detail_timeout_seconds',12)),'retries':settings.get('detail_retries',0)}
+                        html=fetch(raw['url'],detail_settings).decode('utf-8','replace')
                         parser=euraxess_detail if adapter=='euraxess' else jobinrwanda_detail if adapter=='jobinrwanda' else article_detail
                         raw=parser(html,raw)
                         dated=date_from_text(raw.get('description',''))

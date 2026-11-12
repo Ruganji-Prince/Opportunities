@@ -17,7 +17,7 @@ export function OpportunityCard({opportunity:o,now,tracking:t,expanded,update,to
   <h3>{o.title}</h3>
   <dl className="card-facts"><div><dt>Category</dt><dd>{o.subcategory}</dd></div><div><dt>Funding</dt><dd>{o.funding_verified?funded:'Funding not confirmed'}</dd></div></dl>
   {personal&&<div className="personal-card-facts"><p><strong>{o.relevance_score}/100 relevance</strong> · {o.eligibility==='restricted'?'Restriction identified':o.eligibility==='verified'?'Verified eligibility conditions':'Eligibility needs confirmation'}</p><p><strong>Qualifications:</strong> {o.required_qualifications}</p><div className="evidence-labels">{labels(o,now).map(label=><span key={label}>{label}</span>)}</div><p>{o.relevance_explanation.find(x=>!x.startsWith('Score is'))}</p></div>}
-  <div className={'deadline-row '+(warning?'approaching':'')}><CalendarDays size={23}/><div><strong>{date}</strong>{personal&&<small className="countdown">{remaining(o,now)}</small>}</div>{warning&&<span>{s}</span>}</div>
+  <div className={'deadline-row '+(warning?'approaching':'')}><CalendarDays size={23}/><div><strong>{date}</strong>{personal&&<small className="countdown">{remaining(o,now)}</small>}</div>{(warning||['Expired','Closed'].includes(s))&&<span>{s}</span>}</div>
   <div className="card-actions"><button onClick={toggle} aria-expanded={expanded} aria-controls={'details-'+o.id}>{expanded?'Hide details':'View details'}<ChevronDown size={19}/></button><a className="apply-button" target="_blank" rel="noopener noreferrer" href={safeUrl(o.application_url)}>{o.application_url!==o.original_url?'Apply Now':'View Announcement'}<ArrowUpRight size={19}/></a></div>
   {expanded&&<div className="details" id={'details-'+o.id}>
    <h4>Overview</h4><p>{o.description}</p>

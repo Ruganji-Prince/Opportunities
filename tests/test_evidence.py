@@ -39,3 +39,20 @@ class IdentityMergeTests(unittest.TestCase):
         refresh(self.root,self.rows('2026-10-01T12:00:00Z'),NOW)
         result=refresh(self.root,self.rows(None),NOW)
         self.assertEqual((result['active'],result['archived']),(0,1))
+
+
+class DetailBudgetTests(unittest.TestCase):
+    def test_detail_outage_uses_bounded_policy_and_keeps_feed_record(self):
+        from unittest.mock import patch
+        from src.collectors import collect
+        source={'id':'bounded','name':'Bounded feed','adapter':'rss','url':'https://example.org/feed','details':True}
+        settings={'timeout_seconds':25,'retries':2,'request_delay_seconds':0,'detail_timeout_seconds':8,'detail_retries':0}
+        calls=[]
+        def fetched(url,policy):
+            calls.append((url,policy))
+            if url.endswith('/feed'):return b'<rss><channel><item><title>PhD machine learning</title><link>https://example.org/detail</link><description>Doctoral call</description></item></channel></rss>'
+            raise TimeoutError('detail unavailable')
+        with patch('src.collectors.check_robots'),patch('src.collectors.fetch',side_effect=fetched):rows=list(collect(source,settings))
+        self.assertEqual(len(rows),1);self.assertIn('detail_error',rows[0])
+        self.assertEqual((calls[0][1]['timeout_seconds'],calls[0][1]['retries']),(25,2))
+        self.assertEqual((calls[1][1]['timeout_seconds'],calls[1][1]['retries']),(8,0))

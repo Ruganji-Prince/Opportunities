@@ -8,8 +8,9 @@ export function categoryMatch(o:Opportunity,c:string){
  if(c===categories[4])return o.category==='innovation'||/grant|accelerator/i.test(o.title);
  return true;
 }
+export function countryName(value:string){return ({UK:'United Kingdom',USA:'United States',US:'United States'} as Record<string,string>)[value]||value}
 export const searchKey=(v:string)=>v.normalize('NFKD').toLowerCase().replace(/[^\p{L}\p{N}]+/gu,' ').trim();
-export function matchesQuery(o:Opportunity,q:string){const text=searchKey([o.title,o.organization,o.host_country,o.location,...o.tags].join(' '));return searchKey(q).split(' ').every(w=>text.includes(w))}
+export function matchesQuery(o:Opportunity,q:string){const text=searchKey([o.title,o.organization,countryName(o.host_country),o.host_country,o.location,...o.tags].join(' '));return searchKey(q).split(' ').every(w=>text.includes(w))}
 export function available(o:Opportunity,now:number){return !['Closed','Expired'].includes(status(o,now))}
 export function publicRank(o:Opportunity,now:number){
  const age=Math.max(0,(now-Date.parse(o.last_verified))/86400000),d=deadline(o),days=d===null?Infinity:(d-now)/86400000;

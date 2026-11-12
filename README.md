@@ -5,11 +5,11 @@ A free React/TypeScript opportunity search website deployed to GitHub Pages, wit
 
 The public homepage offers search, five category filters, geographic/funding/deadline filters, publisher-diverse recommendations and 12 results at a time. Cards show essential facts; accessible dialogs load details on demand. `?opportunity=<stable-id>` links open a specific announcement. Search includes country, organization and field, with case/punctuation normalization.
 
-Your optional MSc AI recommendations remain under More Filters. Public browsing never uses the owner's personal eligibility or CV score as a gate. Personal notes and application stages stay in the existing browser-only tracker, with import/export and no registration.
+Your optional MSc AI recommendations are available through Top Opportunities for You and More Filters. Dynamic collections include doctoral funding, Fall 2027 intake, research, internships and regional opportunities. Archive browsing remains under More Filters, with explicit Expired/Closed labels. Public browsing never uses the owner's personal eligibility or CV score as a gate. Personal notes and application stages stay in the existing browser-only tracker, with import/export and no registration.
 
 ## Updates and truthful data
 
-Collection runs at `17 */6 * * *` UTC (02:17, 08:17, 14:17, 20:17 Africa/Kigali), subject to GitHub scheduling delays. Each source has independent health, robots/permission checks and timeout handling. Expired and explicitly closed calls are archived. Unknown dates remain unknown, network failures retain previous data, and date conflicts use the earlier disclosed deadline with a warning. The frontend updates its clock every 30 seconds and checks a versioned manifest every 15 minutes without clearing search/filter state.
+Collection runs at `17 */6 * * *` UTC (02:17, 08:17, 14:17, 20:17 Africa/Kigali), subject to GitHub scheduling delays. Each source has independent health, robots/permission checks and timeout handling. Detail requests use a separate bounded timeout so source outages cannot consume the whole collection window. Expired and explicitly closed calls are archived. Unknown dates remain unknown, network failures retain previous data, and date conflicts use the earlier disclosed deadline with a warning. The frontend updates its clock every 30 seconds and checks a versioned manifest every 15 minutes without clearing search/filter state.
 
 Material updates trigger the existing Pages deployment. Timestamp-only commits are suppressed; a successful health refresh may publish after 24 hours to prevent stale freshness labels. Last updated reports actual collection time, not visitor time.
 

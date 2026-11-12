@@ -66,7 +66,24 @@ try{
  await evaluate(`(()=>{const el=document.querySelector('[aria-label="Personal opportunity collection"]');Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype,'value').set.call(el,'Fully Funded PhDs');el.dispatchEvent(new Event('change',{bubbles:true}))})()`);await pause(150);
  await assert(`document.querySelectorAll('main .opportunity-card').length>0&&[...document.querySelectorAll('main .opportunity-card')].every(x=>x.innerText.includes('Fully funded'))`,'verified fully funded doctoral collection works');
  await click('Browse public opportunities');await pause(100);
+
+ await evaluate(`(async()=>{window.__feed=await(await fetch(new URL('data/listings.json',location.href))).json();window.__health=await(await fetch(new URL('data/refresh_status.json',location.href))).json();return true})()`);
+ const expiring=await evaluate(`window.__feed.find(o=>o.deadline_precision==='timestamp'&&Date.parse(o.deadline)>Date.now()&&o.application_status!=='closed')`);
+ if(!expiring)throw Error('No actual timestamped opportunity available for dynamic expiry check');
+ const setSearch=async text=>evaluate(`(()=>{const el=document.querySelector('[aria-label="Search opportunities"]');Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set.call(el,${JSON.stringify(text)});el.dispatchEvent(new Event('input',{bubbles:true}))})()`);
+ await setSearch(expiring.title);await pause(100);await assert(`!!document.querySelector('[data-opportunity-id="${expiring.id}"]')`,'actual dated opportunity is visible before expiry');
+ await evaluate(`window.__realDateNow=Date.now;Date.now=()=>${Date.parse(expiring.deadline)+1000}`);await call('Emulation.setVirtualTimePolicy',{policy:'advance',budget:31000});await pause(150);
+ await assert(`!document.querySelector('[data-opportunity-id="${expiring.id}"]')`,'30-second clock removes an expired opportunity without reloading');
+ await evaluate(`Date.now=window.__realDateNow`);await call('Emulation.setVirtualTimePolicy',{policy:'advance',budget:31000});await pause(100);await setSearch('QA_UPDATED_PUBLIC_FEED');await pause(100);
+ await evaluate(`(()=>{window.__realFetch=window.fetch;window.fetch=async function(input,init){const u=String(input);if(u.includes('data/refresh_status.json'))return new Response(JSON.stringify(window.__health));if(u.includes('data/manifest.json'))return new Response(JSON.stringify({version:'qa-new-publication'}));if(u.includes('data/listings.json'))return new Response(JSON.stringify(window.__feed.map(o=>o.id===${JSON.stringify(expiring.id)}?{...o,title:'QA_UPDATED_PUBLIC_FEED '+o.title}:o)));return window.__realFetch(input,init)};return true})()`);
+ await call('Emulation.setVirtualTimePolicy',{policy:'advance',budget:901000});await pause(1000);
+ await assert(`document.querySelector('[aria-label="Search opportunities"]').value==='QA_UPDATED_PUBLIC_FEED'&&!!document.querySelector('[data-opportunity-id="${expiring.id}"]')`,'15-minute manifest update loads new data without losing search state');
+ await evaluate(`window.fetch=window.__realFetch`);await setSearch('');await pause(100);
  await click('About');await pause(150);await assert(`document.querySelectorAll('.source-card').length>=17`,'operational source status is separated onto About');await click('Home');await pause(150);
+ await click('More Filters');await pause(100);
+ await evaluate(`[...document.querySelectorAll('label')].find(n=>n.textContent.includes('Browse archived opportunities')).querySelector('input').click()`);await pause(100);
+ await assert(`document.querySelector('.results-toolbar h2').textContent==='Archived opportunities'&&document.querySelectorAll('main .opportunity-card').length>0&&[...document.querySelectorAll('main .deadline-row')].every(n=>/Expired|Closed/.test(n.textContent))`,'archive browsing retains closed records and labels them clearly');
+ await evaluate(`[...document.querySelectorAll('label')].find(n=>n.textContent.includes('Browse archived opportunities')).querySelector('input').click()`);await pause(100);await click('More Filters');
  await call('Emulation.setDeviceMetricsOverride',{width:390,height:1000,deviceScaleFactor:1,mobile:true});await pause(200);
  await assert(`innerWidth===390&&document.documentElement.scrollWidth<=390`,'phone layout fits 390px viewport');
  await evaluate(`document.documentElement.style.fontSize='34px'`);await pause(200);

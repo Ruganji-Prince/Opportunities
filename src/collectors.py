@@ -1,6 +1,8 @@
 """Read-only public APIs and RSS. No authentication or anti-bot bypass."""
 import json
 import time
+import ssl
+import sys
 from urllib.request import Request, urlopen
 from urllib.error import HTTPError
 from urllib.parse import urlsplit
@@ -8,14 +10,23 @@ from urllib.robotparser import RobotFileParser
 import xml.etree.ElementTree as ET
 from .core import plain,relevant
 from .parsers import feed_records,euraxess_detail,article_detail,jobinrwanda_links,jobinrwanda_detail
+from .priority import annotate_known,hereon_records,reviewed_announcement,date_from_text
 
 AGENT = 'OpportunityRadar/1.0 (+https://github.com/Ruganji-Prince/Opportunities)'
+
+def tls_context():
+    if sys.platform=='win32':
+        try:
+            import truststore
+            return truststore.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
+        except ImportError:pass
+    return ssl.create_default_context()
 
 def fetch(url, settings, method='GET'):
     for attempt in range(settings['retries']+1):
         try:
             request = Request(url, headers={'User-Agent':AGENT,'Accept':'application/json, application/rss+xml, text/xml;q=0.9, */*;q=0.5'}, method=method)
-            with urlopen(request,timeout=settings['timeout_seconds']) as r:
+            with urlopen(request,timeout=settings['timeout_seconds'],context=tls_context()) as r:
                 if int(r.headers.get('Content-Length','0')) > 15000000: raise ValueError('Response too large')
                 data = r.read(15000001)
                 if len(data)>15000000: raise ValueError('Response too large')
@@ -28,7 +39,7 @@ def fetch(url, settings, method='GET'):
 
 def check_robots(source, settings, url=None, cache=None):
     # Documented public API endpoints are explicitly exposed for reading.
-    if source['adapter'] not in ('rss','euraxess','jobinrwanda'): return
+    if source['adapter'] not in ('rss','euraxess','jobinrwanda','hereon','reviewed'): return
     url=url or source['url'];base = urlsplit(url)
     robots_url = f'{base.scheme}://{base.netloc}/robots.txt'
     parser=(cache or {}).get(robots_url)
@@ -43,15 +54,26 @@ def check_robots(source, settings, url=None, cache=None):
         if cache is not None:cache[robots_url]=parser
     if not parser.can_fetch(AGENT,url): raise PermissionError('robots.txt disallows this URL')
 
-def collect(source, settings):
+def collect(source,settings):
+    for raw in _collect(source,settings):yield annotate_known(raw,source)
+
+def _collect(source, settings):
     if source.get('permission_required') and not source.get('permission_granted'):raise PermissionError('Source requires prior written permission; collection disabled')
+    if source['adapter']=='reviewed':
+        yield reviewed_announcement(source,settings,fetch,check_robots);return
     robots={};check_robots(source,settings,cache=robots)
     body = fetch(source['url'],settings)
     adapter = source['adapter']
+    if adapter=='hereon':
+        yield from hereon_records(body,source);return
     if adapter in ('rss','euraxess','jobinrwanda'):
         rows=jobinrwanda_links(body.decode('utf-8','replace'),source['url']) if adapter=='jobinrwanda' else feed_records(body,source)
         detailed=0
         for raw in rows:
+            import re
+            if source.get('phd_only') and not re.search(r'Ph\.?D|doctoral|DPhil',raw['title']+' '+raw['description'],re.I):continue
+            if source.get('phd_only'):raw['source_category']='PhD'
+            if source['id']=='ufz-research' and re.search(r'Doktorand|doctoral|Ph\.?D',raw['title'],re.I):raw['source_category']='PhD'
             if not relevant(raw):continue
             if source.get('details') or adapter in ('euraxess','jobinrwanda'):
                 if detailed>=source.get('detail_limit',20):
@@ -63,6 +85,8 @@ def collect(source, settings):
                         html=fetch(raw['url'],settings).decode('utf-8','replace')
                         parser=euraxess_detail if adapter=='euraxess' else jobinrwanda_detail if adapter=='jobinrwanda' else article_detail
                         raw=parser(html,raw)
+                        dated=date_from_text(raw.get('description',''))
+                        if dated and not raw.get('deadline'):raw.update(dated)
                     except Exception as e:
                         raw['detail_error']=f'{type(e).__name__}: {str(e)[:160]}'
                         if adapter=='jobinrwanda':continue

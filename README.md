@@ -1,51 +1,39 @@
-# OpportunityRadar
+# OpportunityRadar 2.0
 
-Personal research, AI career and innovation intelligence, with automated public-source collection, transparent profile matching and a live deadline dashboard.
+[Open the public website](https://ruganji-prince.github.io/Opportunities/).
+A free React/TypeScript opportunity search website deployed to GitHub Pages, with Python collectors running on GitHub Actions. No account or paid service is needed to browse.
 
-Published source: [Ruganji-Prince/Opportunities](https://github.com/Ruganji-Prince/Opportunities). **Live dashboard: https://ruganji-prince.github.io/Opportunities/**. GitHub Pages is enabled with GitHub Actions; collection automatically redeploys meaningful data updates. See [deployment and verification](docs/DEPLOYMENT.md).
+The public homepage offers search, five category filters, geographic/funding/deadline filters, publisher-diverse recommendations and 12 results at a time. Cards show essential facts; accessible dialogs load details on demand. `?opportunity=<stable-id>` links open a specific announcement. Search includes country, organization and field, with case/punctuation normalization.
 
-Built for an MSc AI candidate at Carnegie Mellon University Africa (expected May 2027), with mechanical engineering, applied ML, scientific computing, energy and materials interests. The sanitized profile combines the supplied brief with locally reviewed CV evidence, including prosthetics research, CAD/CAM training, explainable ML, embedded systems and energy/health projects. The raw CV and contact details are excluded. Nationality and work authorization remain unknown.
+Your optional MSc AI recommendations remain under More Filters. Public browsing never uses the owner's personal eligibility or CV score as a gate. Personal notes and application stages stay in the existing browser-only tracker, with import/export and no registration.
 
-## Run locally
+## Updates and truthful data
 
-Requires Python 3.11+ and Node 22. Install dependencies and collect real records:
+Collection runs at `17 */6 * * *` UTC (02:17, 08:17, 14:17, 20:17 Africa/Kigali), subject to GitHub scheduling delays. Each source has independent health, robots/permission checks and timeout handling. Expired and explicitly closed calls are archived. Unknown dates remain unknown, network failures retain previous data, and date conflicts use the earlier disclosed deadline with a warning. The frontend updates its clock every 30 seconds and checks a versioned manifest every 15 minutes without clearing search/filter state.
+
+Material updates trigger the existing Pages deployment. Timestamp-only commits are suppressed; a successful health refresh may publish after 24 hours to prevent stale freshness labels. Last updated reports actual collection time, not visitor time.
+
+The browser initially loads compact listings; full descriptions are not included. Detail JSON contains short factual summaries and bounded source evidence. Original announcements remain the authority for application instructions, eligibility and funding. Funding badges require explicit reviewed evidence; paid employment is separate from verified full scholarship coverage. Remote does not imply worldwide work authorization.
+
+## Sources and restrictions
+
+Enabled integrations cover official employer APIs, EURAXESS, DAAD, university and institute feeds, and attributed opportunity directories. Added research coverage includes Hereon, UFZ, DFG, Sussex and Nottingham, with original-announcement watchers for Max Planck Biomedical AI, SINTEF, Sussex QIST, MoveNow and Imagine Cup. See the About page for actual operational status and last success, including empty feeds and unavailable detail pages.
+
+Zindi and Job in Rwanda remain discovery-only pending permission. Additional CMU-Africa, AIMS Rwanda, University of Rwanda, AU, Kaggle, Devpost and academic directory links are discovery-only; they are not counted as functioning collectors. No login, robots or anti-bot restriction is bypassed.
+
+## Development and checks
 
 ```sh
-python -m pip install -r requirements.txt
-python -m src.pipeline
+pip install -r requirements.txt
+python scripts/check.py
+python scripts/refresh.py
 python -m src.pipeline --validate
-python -m unittest discover -s tests -v
 cd frontend
 npm ci
 npm test
 npm run build
-npm run dev
 ```
 
-The repository includes genuine collected data; the UI never generates example opportunities. `npm run build` copies only public database/health feeds into the static output. Collection can fail when a source is offline; prior data is retained and failures are visible.
+`node scripts/browser_qa.mjs` from the repository root tests the production build with installed Chrome; set `CHROME_BINARY` on non-Windows systems. `RADAR_QA_URL` targets the deployed site. Tests cover sharing, bookmarks, private notes, source visibility, mobile layout and 200% text scaling. Screenshots are local ignored artifacts.
 
-On Windows without Node, `python scripts/bootstrap_tools.py` downloads a checksum-verified portable Node 22 into ignored `.tools/`; `python scripts/run_frontend.py install`, `python scripts/run_frontend.py test` and `python scripts/run_frontend.py run build` use it. This is an optional local convenience, not a production dependency.
-
-## What it does
-
-- Seventeen enabled integrations: the original Anthropic, Recursion, Cohere, CERN, Opportunities for Africans and Remotive sources, plus EURAXESS, DAAD PhDGermany, official Bath/Oxford/Southampton feeds, specialist African PhD/fellowship/competition feeds, and original-employer One Acre Fund/Zipline regional APIs. Empty university feeds are reported honestly. The Sources tab shows actual health, counts and last success.
-- Stable normalized records, source and date evidence, canonical URL and attribute deduplication, safe text extraction, bounded retries and atomic JSON storage.
-- Configurable 0–100 scoring with eligibility restrictions overriding keywords; skills and unverified interests stay separate.
-- Deadline-first ranking with relevance tie breaks. Rolling and unknown deadlines follow dated listings. Expired records automatically move out of the active view as the browser clock advances.
-- Research, careers, innovation, geographic, remote, funding, eligibility, specialization and deadline filters; multiple sort orders; responsive cards and details.
-- Bookmarks, application stages, private notes, preparation deadlines, JSON backup/transfer and deadline ICS exports. Personal tracking stays in this browser's localStorage and does not automatically synchronize.
-- Six-hour GitHub Actions collection, manual dispatch, test workflows and Pages deployment. Optional deduplicated GitHub Issue and Resend alerts after successful provider responses.
-
-No external notifications are enabled by default. A configured workflow is not proof that it is running: inspect the GitHub Actions run and Pages deployment before claiming automation or publication.
-
-## Customize and maintain
-
-Configuration uses the JSON subset of YAML. Edit `config/profile.yaml` for verified education/skills and separate interests, `scoring.yaml` for weights, `sources.yaml` for enabled feeds, and `settings.yaml` for retries/timeouts and warning thresholds. Keep all raw CVs under ignored `private/` and manually review any imported claims.
-
-See [architecture and limitations](docs/ARCHITECTURE.md), [sources and adding adapters](docs/SOURCES.md), [scoring and CV import](docs/SCORING.md), [updates and alert setup](docs/AUTOMATION.md), and [GitHub Pages deployment](docs/DEPLOYMENT.md).
-
-## Verification and limits
-
-Tests cover timestamp zones and DST, date-only uncertainty, expiry, rolling/unknown dates, duplicate postings, ineligibility, changed deadlines, outages, relevance ties, empty filters, live reordering, safe imports, URL handling, and notification delivery state. Frontend compilation and production build are required by CI.
-
-Eligibility is frequently unknown: host country and remote status do not establish nationality or work permission. Descriptions and English keyword scoring can miss conditions. Exact dates are only extracted from explicitly labeled source evidence with a year; undisclosed dates/funding stay unknown. Coverage now includes university doctoral/research feeds and original-employer Rwanda/East Africa listings; short feed windows, empty feeds and access restrictions still limit completeness. Zindi and Job in Rwanda remain discovery-only because their terms restrict collection or republication without permission. A successful source download does not guarantee each original listing is still accepting applications; follow the organizer link. Third-party opportunity content retains its original publisher's rights.
+The public site uses free static hosting and scheduled repository workflows within GitHub's free-tier limits. It is periodic discovery, not exhaustive or real-time internet coverage. No raw CV, private notes or credentials belong in this repository.

@@ -1,21 +1,410 @@
 [
- {"id":"anthropic","name":"Anthropic","adapter":"greenhouse","url":"https://boards-api.greenhouse.io/v1/boards/anthropic/jobs?content=true","organization":"Anthropic","enabled":true,"policy":"https://docs.greenhouse.io/job-board.html"},
- {"id":"recursion","name":"Recursion Pharmaceuticals","adapter":"greenhouse","url":"https://boards-api.greenhouse.io/v1/boards/recursionpharmaceuticals/jobs?content=true","organization":"Recursion Pharmaceuticals","enabled":true,"policy":"https://docs.greenhouse.io/job-board.html"},
- {"id":"oneacrefund","name":"One Acre Fund — Rwanda and East Africa","adapter":"greenhouse","url":"https://boards-api.greenhouse.io/v1/boards/oneacrefund/jobs?content=true","organization":"One Acre Fund","enabled":true,"location_keywords":["rwanda","kenya","uganda","tanzania","africa"],"policy":"Original employer's documented public Greenhouse Job Board API: https://docs.greenhouse.io/job-board.html; regional host-location filter does not imply work authorization"},
- {"id":"zipline-africa","name":"Zipline — Rwanda and Africa","adapter":"greenhouse","url":"https://boards-api.greenhouse.io/v1/boards/flyzipline/jobs?content=true","organization":"Zipline","enabled":true,"location_keywords":["rwanda","kenya","uganda","tanzania","africa"],"policy":"Original employer's documented public Greenhouse Job Board API: https://docs.greenhouse.io/job-board.html; technical roles from regional host locations"},
- {"id":"cohere","name":"Cohere","adapter":"ashby","url":"https://api.ashbyhq.com/posting-api/job-board/cohere","organization":"Cohere","enabled":true,"policy":"https://developers.ashbyhq.com/docs/public-job-posting-api"},
- {"id":"cern","name":"CERN","adapter":"smartrecruiters","url":"https://api.smartrecruiters.com/v1/companies/CERN/postings?limit=100","organization":"CERN","enabled":true,"policy":"https://developers.smartrecruiters.com/docs/posting-api"},
- {"id":"ofa","name":"Opportunities for Africans","adapter":"rss","url":"https://www.opportunitiesforafricans.com/feed/","organization":"unknown","enabled":true,"policy":"Public syndication feed; attribution and original article link retained"},
- {"id":"remotive","name":"Remotive","adapter":"remotive","url":"https://remotive.com/api/remote-jobs?category=software-dev","organization":"unknown","enabled":true,"policy":"https://github.com/remotive-com/remote-jobs-api; attribute and link to Remotive; max four requests/day"},
- {"id":"euraxess","name":"EURAXESS research jobs","adapter":"euraxess","url":"https://euraxess.ec.europa.eu/job-feed","enabled":true,"creator_is_organization":true,"details":true,"detail_limit":20,"policy":"Public EURAXESS RSS feed and robots-permitted public job pages; https://euraxess.ec.europa.eu/robots.txt"},
- {"id":"southampton-phd","name":"University of Southampton funded PhDs","adapter":"rss","url":"https://jobs.soton.ac.uk/RSS/rss.aspx?cat=882","organization":"University of Southampton","enabled":true,"source_category":"PhD Studentship (Funded)","funding_evidence":"Official university feed category: PhD Studentship (Funded). Fee coverage and nationality conditions require confirmation.","policy":"Official RSS directory https://jobs.soton.ac.uk/RSS/; feed explicitly offered for vacancy updates; currently may be empty"},
- {"id":"daad-phd","name":"DAAD PhDGermany doctoral positions","adapter":"rss","url":"https://api.daad.de/api/feeds/rss/en/phd.xml","enabled":true,"structured_phd":true,"source_category":"PhD","host_country":"Germany","policy":"Official Subscribe to RSS link at https://www.daad.de/en/studying-in-germany/phd-studies-research/phd-germany/; parse published company, location and applicationDeadline fields. api.daad.de robots.txt is absent (404), not denied."},
- {"id":"bath-research","name":"University of Bath research vacancies","adapter":"rss","url":"https://www.bath.ac.uk/jobs/rss/rss.aspx","organization":"University of Bath","enabled":true,"policy":"Official syndicated vacancy feed https://www.bath.ac.uk/jobs/rss/; robots checked each run"},
- {"id":"oxford-research","name":"Oxford Computer Science research","adapter":"rss","url":"https://www.cs.ox.ac.uk/feeds/News-Vacancies-Research.xml","organization":"University of Oxford, Department of Computer Science","enabled":true,"details":true,"detail_limit":10,"policy":"Official RSS directory https://www.cs.ox.ac.uk/rssfeeds.html; public research announcements only"},
- {"id":"oxford-studentships","name":"Oxford Computer Science studentships","adapter":"rss","url":"https://www.cs.ox.ac.uk/feeds/News-Studentships.xml","organization":"University of Oxford, Department of Computer Science","enabled":true,"source_category":"PhD studentship","details":true,"detail_limit":10,"policy":"Official studentship RSS offered at https://www.cs.ox.ac.uk/rssfeeds.html; an empty feed is reported honestly"},
- {"id":"ofa-phd","name":"Opportunities for Africans — PhD scholarships","adapter":"rss","url":"https://www.opportunitiesforafricans.com/category/scholarships/phd/feed/","organization":"unknown","enabled":true,"details":true,"detail_limit":10,"policy":"Publisher-provided PhD RSS; robots-permitted article details; attribution and announcement links retained"},
- {"id":"ofa-fellowships","name":"Opportunities for Africans — fellowships","adapter":"rss","url":"https://www.opportunitiesforafricans.com/category/fellowships/feed/","organization":"unknown","enabled":true,"details":true,"detail_limit":10,"policy":"Publisher-provided fellowship RSS; robots-permitted article details; verify with organizer"},
- {"id":"ofa-contests","name":"Opportunities for Africans — innovation competitions","adapter":"rss","url":"https://www.opportunitiesforafricans.com/category/contests/feed/","organization":"unknown","enabled":true,"details":true,"detail_limit":10,"policy":"Publisher-provided competition RSS; robots-permitted article details; verify with organizer"},
- {"id":"jobinrwanda","name":"Job in Rwanda","adapter":"manual","url":"https://www.jobinrwanda.com/","enabled":false,"permission_required":true,"permission_granted":false,"policy":"Discovery link only. https://www.jobinrwanda.com/page/terms-use prohibits automated extraction and republication without prior written permission; robots allowance does not override those terms. No records retained in the current feed."},
- {"id":"zindi","name":"Zindi competitions","adapter":"manual","url":"https://zindi.world/competitions","enabled":false,"policy":"Reviewed https://zindi.world/terms: republication and monitoring restricted; keep discovery link only unless permission is obtained"}
+  {
+    "id": "anthropic",
+    "name": "Anthropic",
+    "adapter": "greenhouse",
+    "url": "https://boards-api.greenhouse.io/v1/boards/anthropic/jobs?content=true",
+    "organization": "Anthropic",
+    "enabled": true,
+    "policy": "https://docs.greenhouse.io/job-board.html"
+  },
+  {
+    "id": "recursion",
+    "name": "Recursion Pharmaceuticals",
+    "adapter": "greenhouse",
+    "url": "https://boards-api.greenhouse.io/v1/boards/recursionpharmaceuticals/jobs?content=true",
+    "organization": "Recursion Pharmaceuticals",
+    "enabled": true,
+    "policy": "https://docs.greenhouse.io/job-board.html"
+  },
+  {
+    "id": "oneacrefund",
+    "name": "One Acre Fund â€” Rwanda and East Africa",
+    "adapter": "greenhouse",
+    "url": "https://boards-api.greenhouse.io/v1/boards/oneacrefund/jobs?content=true",
+    "organization": "One Acre Fund",
+    "enabled": true,
+    "location_keywords": [
+      "rwanda",
+      "kenya",
+      "uganda",
+      "tanzania",
+      "africa"
+    ],
+    "policy": "Original employer's documented public Greenhouse Job Board API: https://docs.greenhouse.io/job-board.html; regional host-location filter does not imply work authorization"
+  },
+  {
+    "id": "zipline-africa",
+    "name": "Zipline â€” Rwanda and Africa",
+    "adapter": "greenhouse",
+    "url": "https://boards-api.greenhouse.io/v1/boards/flyzipline/jobs?content=true",
+    "organization": "Zipline",
+    "enabled": true,
+    "location_keywords": [
+      "rwanda",
+      "kenya",
+      "uganda",
+      "tanzania",
+      "africa"
+    ],
+    "policy": "Original employer's documented public Greenhouse Job Board API: https://docs.greenhouse.io/job-board.html; technical roles from regional host locations"
+  },
+  {
+    "id": "cohere",
+    "name": "Cohere",
+    "adapter": "ashby",
+    "url": "https://api.ashbyhq.com/posting-api/job-board/cohere",
+    "organization": "Cohere",
+    "enabled": true,
+    "policy": "https://developers.ashbyhq.com/docs/public-job-posting-api"
+  },
+  {
+    "id": "cern",
+    "name": "CERN",
+    "adapter": "smartrecruiters",
+    "url": "https://api.smartrecruiters.com/v1/companies/CERN/postings?limit=100",
+    "organization": "CERN",
+    "enabled": true,
+    "policy": "https://developers.smartrecruiters.com/docs/posting-api"
+  },
+  {
+    "id": "ofa",
+    "name": "Opportunities for Africans",
+    "adapter": "rss",
+    "url": "https://www.opportunitiesforafricans.com/feed/",
+    "organization": "unknown",
+    "enabled": true,
+    "policy": "Public syndication feed; attribution and original article link retained"
+  },
+  {
+    "id": "remotive",
+    "name": "Remotive",
+    "adapter": "remotive",
+    "url": "https://remotive.com/api/remote-jobs?category=software-dev",
+    "organization": "unknown",
+    "enabled": true,
+    "policy": "https://github.com/remotive-com/remote-jobs-api; attribute and link to Remotive; max four requests/day"
+  },
+  {
+    "id": "euraxess",
+    "name": "EURAXESS research jobs",
+    "adapter": "euraxess",
+    "url": "https://euraxess.ec.europa.eu/job-feed",
+    "enabled": true,
+    "creator_is_organization": true,
+    "details": true,
+    "detail_limit": 20,
+    "policy": "Public EURAXESS RSS feed and robots-permitted public job pages; https://euraxess.ec.europa.eu/robots.txt"
+  },
+  {
+    "id": "southampton-phd",
+    "name": "University of Southampton funded PhDs",
+    "adapter": "rss",
+    "url": "https://jobs.soton.ac.uk/RSS/rss.aspx?cat=882",
+    "organization": "University of Southampton",
+    "enabled": true,
+    "source_category": "PhD Studentship (Funded)",
+    "funding_evidence": "Official university feed category: PhD Studentship (Funded). Fee coverage and nationality conditions require confirmation.",
+    "policy": "Official RSS directory https://jobs.soton.ac.uk/RSS/; feed explicitly offered for vacancy updates; currently may be empty"
+  },
+  {
+    "id": "daad-phd",
+    "name": "DAAD PhDGermany doctoral positions",
+    "adapter": "rss",
+    "url": "https://api.daad.de/api/feeds/rss/en/phd.xml",
+    "enabled": true,
+    "structured_phd": true,
+    "source_category": "PhD",
+    "host_country": "Germany",
+    "policy": "Official Subscribe to RSS link at https://www.daad.de/en/studying-in-germany/phd-studies-research/phd-germany/; parse published company, location and applicationDeadline fields. api.daad.de robots.txt is absent (404), not denied."
+  },
+  {
+    "id": "bath-research",
+    "name": "University of Bath research vacancies",
+    "adapter": "rss",
+    "url": "https://www.bath.ac.uk/jobs/rss/rss.aspx",
+    "organization": "University of Bath",
+    "enabled": true,
+    "policy": "Official syndicated vacancy feed https://www.bath.ac.uk/jobs/rss/; robots checked each run"
+  },
+  {
+    "id": "oxford-research",
+    "name": "Oxford Computer Science research",
+    "adapter": "rss",
+    "url": "https://www.cs.ox.ac.uk/feeds/News-Vacancies-Research.xml",
+    "organization": "University of Oxford, Department of Computer Science",
+    "enabled": true,
+    "details": true,
+    "detail_limit": 10,
+    "policy": "Official RSS directory https://www.cs.ox.ac.uk/rssfeeds.html; public research announcements only"
+  },
+  {
+    "id": "oxford-studentships",
+    "name": "Oxford Computer Science studentships",
+    "adapter": "rss",
+    "url": "https://www.cs.ox.ac.uk/feeds/News-Studentships.xml",
+    "organization": "University of Oxford, Department of Computer Science",
+    "enabled": true,
+    "source_category": "PhD studentship",
+    "details": true,
+    "detail_limit": 10,
+    "policy": "Official studentship RSS offered at https://www.cs.ox.ac.uk/rssfeeds.html; an empty feed is reported honestly"
+  },
+  {
+    "id": "ofa-phd",
+    "name": "Opportunities for Africans â€” PhD scholarships",
+    "adapter": "rss",
+    "url": "https://www.opportunitiesforafricans.com/category/scholarships/phd/feed/",
+    "organization": "unknown",
+    "enabled": true,
+    "details": true,
+    "detail_limit": 10,
+    "policy": "Publisher-provided PhD RSS; robots-permitted article details; attribution and announcement links retained"
+  },
+  {
+    "id": "ofa-fellowships",
+    "name": "Opportunities for Africans â€” fellowships",
+    "adapter": "rss",
+    "url": "https://www.opportunitiesforafricans.com/category/fellowships/feed/",
+    "organization": "unknown",
+    "enabled": true,
+    "details": true,
+    "detail_limit": 10,
+    "policy": "Publisher-provided fellowship RSS; robots-permitted article details; verify with organizer"
+  },
+  {
+    "id": "ofa-contests",
+    "name": "Opportunities for Africans â€” innovation competitions",
+    "adapter": "rss",
+    "url": "https://www.opportunitiesforafricans.com/category/contests/feed/",
+    "organization": "unknown",
+    "enabled": true,
+    "details": true,
+    "detail_limit": 10,
+    "policy": "Publisher-provided competition RSS; robots-permitted article details; verify with organizer"
+  },
+  {
+    "id": "jobinrwanda",
+    "name": "Job in Rwanda",
+    "adapter": "manual",
+    "url": "https://www.jobinrwanda.com/",
+    "enabled": false,
+    "permission_required": true,
+    "permission_granted": false,
+    "policy": "Discovery link only. https://www.jobinrwanda.com/page/terms-use prohibits automated extraction and republication without prior written permission; robots allowance does not override those terms. No records retained in the current feed."
+  },
+  {
+    "id": "zindi",
+    "name": "Zindi competitions",
+    "adapter": "manual",
+    "url": "https://zindi.world/competitions",
+    "enabled": false,
+    "policy": "Reviewed https://zindi.world/terms: republication and monitoring restricted; keep discovery link only unless permission is obtained"
+  },
+  {
+    "id": "hereon-research",
+    "name": "Hereon doctoral and research positions",
+    "adapter": "hereon",
+    "url": "https://www.hereon.de/innovation_transfer/communication_media/rss/rss_jobs_helmholtz.en.xml",
+    "enabled": true,
+    "policy": "Official RSS directory https://www.hereon.de/communication_media/rss/index.php.en offers doctoral/internship/thesis job feed; robots checked. Conflicting deadline years use earlier date and a visible warning."
+  },
+  {
+    "id": "ufz-research",
+    "name": "Helmholtz UFZ research vacancies",
+    "adapter": "rss",
+    "url": "https://recruitingapp-5128.de.umantis.com/RssFeed/70/rss.xml",
+    "organization": "Helmholtz Centre for Environmental Research â€” UFZ",
+    "source_category": "research",
+    "enabled": true,
+    "details": true,
+    "detail_limit": 8,
+    "policy": "Official UFZ feed directory https://www.ufz.de/index.php?de=34855 links this syndicated vacancies feed; both source-host robots policies checked."
+  },
+  {
+    "id": "dfg-research",
+    "name": "DFG-funded doctoral research",
+    "adapter": "rss",
+    "url": "https://www.dfg.de/service/rss/de/325058/feed.rss",
+    "organization": "University of Duisburg-Essen",
+    "source_category": "research",
+    "enabled": true,
+    "details": true,
+    "detail_limit": 8,
+    "policy": "Official https://www.dfg.de/de/service/rss explicitly offers research-vacancy RSS and periodic feed polling; bilingual versions of the same ad share one identity."
+  },
+  {
+    "id": "sussex-phd",
+    "name": "University of Sussex doctoral scholarships",
+    "adapter": "rss",
+    "url": "https://www.sussex.ac.uk/study/fees-funding/phd-funding/rss/?cpgr=&cpgt=&cug=&e=&l=&spgr=&spgt=&sug=",
+    "organization": "University of Sussex",
+    "phd_only": true,
+    "enabled": true,
+    "details": true,
+    "detail_limit": 20,
+    "policy": "Publisher offers RSS for doctoral funding search results; robots checked. Retain PhD-level records only; do not discard current 2027 calls by old publication dates."
+  },
+  {
+    "id": "bmai-phd",
+    "name": "Max Planck School of Biomedical AI",
+    "adapter": "reviewed",
+    "rule": "bmai",
+    "url": "https://biomedicalai.maxplanckschools.org/4056/application-process",
+    "companion_urls": [
+      "https://biomedicalai.maxplanckschools.org/5739/faq",
+      "https://biomedicalai.maxplanckschools.org/3449/program"
+    ],
+    "title": "Max Planck School of Biomedical AI â€” PhD program",
+    "organization": "Max Planck School of Biomedical Artificial Intelligence",
+    "location": "Germany",
+    "source_category": "PhD",
+    "enabled": true,
+    "policy": "Original public application, FAQ and program pages; robots checked; only announcement facts and short source evidence retained; application portal is never scraped or submitted to."
+  },
+  {
+    "id": "sintef-heatminds",
+    "name": "SINTEF HeatMinds doctoral announcement",
+    "adapter": "reviewed",
+    "rule": "sintef",
+    "url": "https://www.sintef.no/en/sintef-group/career/vacant-positions/position/145824/",
+    "record_url": "https://euraxess.ec.europa.eu/jobs/475218",
+    "title": "PhD Candidate (MSCA) in optimal high temperature heat pump control",
+    "organization": "SINTEF",
+    "location": "Norway",
+    "source_category": "PhD",
+    "enabled": true,
+    "policy": "Original public doctoral announcement; source-labeled deadline, explicit MSc cutoff and mobility conditions are rechecked, never inferred from keyword similarity."
+  },
+  {
+    "id": "sussex-quantum",
+    "name": "Sussex QIST 2027 doctoral funding",
+    "adapter": "reviewed",
+    "rule": "sussex-quantum",
+    "url": "https://www.sussex.ac.uk/study/fees-funding/phd-funding/view/1700-4-year-PhDs-at-the-EPSRC-Centre-for-Doctoral-Training-in-Quantum-Information-Science-and-Technologies",
+    "title": "Four-year PhDs at the EPSRC CDT in Quantum Information Science and Technologies (2027)",
+    "organization": "University of Sussex",
+    "location": "United Kingdom",
+    "source_category": "PhD",
+    "enabled": true,
+    "policy": "Original university scholarship detail, linked by the official doctoral RSS; final deadline and early-fill warnings retained; no scholarship application submitted."
+  },
+  {
+    "id": "movenow-challenge",
+    "name": "Allianz x Social Shifters MoveNow",
+    "adapter": "reviewed",
+    "rule": "movenow",
+    "url": "https://www.socialshifters.co/allianz-movenow-social-innovation-challenge/",
+    "title": "Allianz x Social Shifters MoveNow Social Innovation Challenge",
+    "organization": "Allianz / Social Shifters",
+    "location": "Global",
+    "source_category": "competition",
+    "enabled": true,
+    "policy": "Original organizer announcement; robots checked; age, project-ownership and competitive-grant conditions preserved; no entry submitted."
+  },
+  {
+    "id": "nottingham-phd",
+    "name": "University of Nottingham doctoral studentships",
+    "adapter": "rss",
+    "url": "https://jobs.nottingham.ac.uk/rss/rss.aspx?cat=213",
+    "organization": "University of Nottingham",
+    "source_category": "PhD",
+    "location": "United Kingdom",
+    "enabled": true,
+    "policy": "Official RSS directory https://jobs.nottingham.ac.uk/RSS/ explicitly links Studentships cat213; robots checked; no certificate validation bypass. International fee coverage is never assumed."
+  },
+  {
+    "id": "imagine-cup-rules",
+    "name": "Microsoft Imagine Cup official rules and eligibility",
+    "adapter": "reviewed",
+    "rule": "imagine",
+    "url": "https://imaginecup.microsoft.com/en-us/support/faq",
+    "record_url": "https://www.opportunitiesforafricans.com/the-microsoft-imagine-cup-student-startup-competition-2027",
+    "title": "Microsoft Imagine Cup 2027",
+    "organization": "Microsoft",
+    "source_category": "competition",
+    "location": "Global",
+    "enabled": true,
+    "policy": "Official public FAQ/rules announcement; robots checked; registered-startup conditions must not be replaced by older student-only criteria. No application submitted."
+  },
+  {
+    "id": "cmu-africa-discovery",
+    "name": "CMU-Africa careers",
+    "url": "https://africa.engineering.cmu.edu/about/careers.html",
+    "adapter": "discovery",
+    "enabled": false,
+    "policy": "Official careers directory mixes current and historic teaching calls; linked Interfolio applications require accounts. No approved public vacancy feed verified."
+  },
+  {
+    "id": "aims-rwanda-discovery",
+    "name": "AIMS Rwanda research opportunities",
+    "url": "https://aims.ac.rw/research-opportunity/",
+    "adapter": "discovery",
+    "enabled": false,
+    "policy": "Official research directory; current call dates and automated reuse permission require confirmation."
+  },
+  {
+    "id": "ur-discovery",
+    "name": "University of Rwanda",
+    "url": "https://ur.ac.rw/",
+    "adapter": "discovery",
+    "enabled": false,
+    "policy": "Official university directory; no stable approved opportunity API or RSS verified."
+  },
+  {
+    "id": "au-discovery",
+    "name": "African Union careers",
+    "url": "https://careers.au.int/",
+    "adapter": "discovery",
+    "enabled": false,
+    "policy": "Official recruitment portal; no public feed and automated reuse permission verified."
+  },
+  {
+    "id": "kaggle-discovery",
+    "name": "Kaggle competitions",
+    "url": "https://www.kaggle.com/competitions",
+    "adapter": "discovery",
+    "enabled": false,
+    "policy": "Competition API requires account/credentials and applicable terms; no anonymous automated integration claimed."
+  },
+  {
+    "id": "devpost-discovery",
+    "name": "Devpost hackathons",
+    "url": "https://devpost.com/hackathons",
+    "adapter": "discovery",
+    "enabled": false,
+    "policy": "Directory available for manual discovery; public API and collection permission not verified."
+  },
+  {
+    "id": "findaphd-discovery",
+    "name": "FindAPhD",
+    "url": "https://www.findaphd.com/",
+    "adapter": "discovery",
+    "enabled": false,
+    "policy": "Aggregator reuse and automated extraction permission not established; discovery only."
+  },
+  {
+    "id": "academicpositions-discovery",
+    "name": "Academic Positions",
+    "url": "https://academicpositions.com/",
+    "adapter": "discovery",
+    "enabled": false,
+    "policy": "Aggregator reuse and automated extraction permission not established; discovery only."
+  },
+  {
+    "id": "jobsacuk-discovery",
+    "name": "jobs.ac.uk",
+    "url": "https://www.jobs.ac.uk/",
+    "adapter": "discovery",
+    "enabled": false,
+    "policy": "Aggregator feed availability and reuse terms require confirmation; discovery only."
+  },
+  {
+    "id": "naturecareers-discovery",
+    "name": "Nature Careers",
+    "url": "https://www.nature.com/naturecareers/",
+    "adapter": "discovery",
+    "enabled": false,
+    "policy": "Automated feed and reuse permission not established; discovery only."
+  }
 ]

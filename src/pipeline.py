@@ -7,6 +7,7 @@ from .collectors import collect,fetch
 from .core import normalize,match,deduplicate,deadline_status,sort_key,relevant
 from .storage import read,write
 from .notifications import notify
+from .assessment import identity_key
 
 ROOT=Path(__file__).resolve().parents[1]
 log=logging.getLogger('opportunityradar')
@@ -19,9 +20,14 @@ def refresh(root=ROOT, collector=collect, now=None, only=None):
     records={o['id']:o for o in previous if relevant(o)}; old={o['id']:o.copy() for o in previous}
     prior_status=read(root/'data/refresh_status.json',{})
     prior_health={s['id']:s for s in prior_status.get('sources',[])}
+    aliases={identity_key(u):identity_key(group['primary']) for group in read(root/'config/identities.yaml',[]) for u in group['aliases']}
+    key=lambda u:aliases.get(identity_key(u),identity_key(u))
+    identity_index={key(o['original_url']):o['id'] for o in previous}
     health=[]; successes=0; new=0; modified=0
     for source in sources:
         state={**source,'checked_at':stamp,'status':'skipped','count':0,'last_success':prior_health.get(source['id'],{}).get('last_success')}
+        if only and source['id'] not in only and source['id'] in prior_health:
+            health.append({**source,**prior_health[source['id']]});continue
         if not source['enabled'] or (only and source['id'] not in only):
             state['message']='Not enabled or not selected'; health.append(state); continue
         if source['id']=='remotive' and state['last_success'] and (now-datetime.fromisoformat(state['last_success'])).total_seconds()<6*3600:
@@ -38,8 +44,17 @@ def refresh(root=ROOT, collector=collect, now=None, only=None):
                 # Do not fill the public database with unrelated business roles.
                 if relevant(o): staged.append(o)
             for o in staged:
+                known_id=identity_index.get(key(o['original_url']))
+                if known_id:o['id']=known_id
                 existing=records.get(o['id'])
                 if existing:
+                    for field in ('assessment','reviewed_at','review_sources'):
+                        if field not in o and field in existing:o[field]=existing[field]
+                    # An unavailable deadline is not evidence that an expired/closed cycle reopened.
+                    if existing.get('deadline_status') in ('Expired','Closed') and not o.get('deadline'):
+                        for field in ('deadline','deadline_precision','deadline_timezone','deadline_evidence','application_status'):o[field]=existing.get(field,o.get(field))
+                    o['identity_urls']=sorted(set(existing.get('identity_urls',[])+[existing['original_url'],o['original_url']]))
+                    o=match(o,profile,weights)
                     o['first_discovered']=existing['first_discovered']
                     o['last_updated']=existing.get('last_updated',existing['first_discovered'])
                     fields=('title','organization','description','application_url','deadline','deadline_precision','deadline_timezone','application_status','location','remote','salary','source_category','funding_evidence','funding_status','relevance_score')
@@ -47,6 +62,7 @@ def refresh(root=ROOT, collector=collect, now=None, only=None):
                     if not o['link_validation'].startswith('HTTP GET succeeded'):o['link_validation']=existing.get('link_validation',o['link_validation'])
                 else: new+=1; o['last_updated']=stamp
                 records[o['id']]=o
+                identity_index[key(o['original_url'])]=o['id']
             state.update(status='ok',count=len(staged),last_success=stamp,detail_failures=detail_failures,message='Public source retrieved and schema parsed'+(f'; {detail_failures} details unavailable, feed evidence retained' if detail_failures else ''))
             log.info('%s: %d relevant records; %d unavailable detail pages',source['id'],len(staged),detail_failures)
             successes+=1

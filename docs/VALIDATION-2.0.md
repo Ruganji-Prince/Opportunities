@@ -1,0 +1,38 @@
+# OpportunityRadar 2.0 validation
+
+Existing repository and GitHub Pages history retained. Public browsing is independent of CV matching; the optional personal dashboard includes dynamic doctoral, research, regional, internship and innovation collections. Existing localStorage key, stages, import/export, calendar export and notes are preserved.
+
+Local verification: 67 backend tests, 22 frontend tests, TypeScript and production Vite build pass. Chrome acceptance covers 12-card pagination, category filters, earliest deadlines, publisher diversity, share links and reload, private notes, personal funding views, keyboard dismissal, 390px mobile layout and 200% text scaling on phone/desktop. No browser exceptions observed.
+
+Full source collection completed with independent source health. Microsoft Imagine Cup returned HTTP 403; no restriction was bypassed. EURAXESS provided feed records while some detail requests failed; failures remain explicit. Empty Southampton and Oxford studentship feeds were not populated artificially. Discovery-only providers are not counted as successful collectors.
+
+New adapter tests cover Hereon administrative filtering and conflicting dates, numeric application deadlines, funding certainty, graduation cutoffs, German language constraints, stable DAAD identities, and preventing expired cycles from reopening without evidence. Public ranking and personal curation tests cover senior roles, urgency, stale reviews and startup requirements.
+
+Source findings: Max Planck Biomedical AI has a December 2026 deadline and September 2027 intake; final MSc documents before entry remain necessary. Hereon magnesium materials source dates conflict, so the earlier date is retained with a warning. SINTEF requires MSc completion before January 2027. The automated-driving position requires German C1. Anthropic Safety's old cohort is closed despite general rolling language. Research interests are never asserted as CV-demonstrated skills.
+
+Local counts before the next production refresh:
+
+```json
+{
+  "active": 589,
+  "archived": 28,
+  "new_active_since_530_baseline": 64,
+  "new_with_individual_link_check": 10,
+  "recommended": 213,
+  "doctoral": 57,
+  "fully_funded_verified": 2,
+  "rwanda_east_africa": 5,
+  "categories": {
+    "research": 175,
+    "industry": 405,
+    "innovation": 9
+  },
+  "source_status": {
+    "ok": 26,
+    "failed": 1
+  },
+  "last_successful_refresh": "2026-11-11T18:25:27.432935+00:00"
+}
+```
+
+Counts are collection snapshots, not guarantees that every unknown-deadline listing remains open. Source attribution, freshness and conditions remain available in details. Live deployment and production collection outcomes are reported after GitHub Actions finishes.

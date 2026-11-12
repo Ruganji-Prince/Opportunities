@@ -6,6 +6,7 @@ from html.parser import HTMLParser
 import re
 from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode
 from zoneinfo import ZoneInfo
+from .assessment import apply_assessment
 
 UTC = timezone.utc
 
@@ -67,7 +68,7 @@ def match(o, profile, weights):
     verified = [k for k in verified_skills if re.search(r'(?<!\w)'+re.escape(k)+r'(?!\w)',text)]
     interests = [k for k in profile['interests'] if k in text]
     hard = []
-    if re.search(r'\b(postdoc\w*|post[- ]doctoral|professor|faculty)\b',title) or re.search(r'(ph\.?d\.?|doctorate)(?: in [^.;]{1,100})? (?:is )?(required|mandatory)|must (?:have|hold|possess) (?:a )?(?:ph\.?d\.?|doctorate)',text): hard.append('Completed doctorate required; profile has no completed PhD')
+    if re.search(r'\b(postdoc\w*|post[- ]doctoral|professor|faculty (?:position|member))\b',title) or re.search(r'(ph\.?d\.?|doctorate)(?: in [^.;]{1,100})? (?:is )?(required|mandatory)|must (?:have|hold|possess) (?:a )?(?:ph\.?d\.?|doctorate)',text): hard.append('Completed doctorate required; profile has no completed PhD')
     if re.search(r'currently enrolled in (?:a )?(?:ph\.?d\.?|doctoral)',text): hard.append('Current doctoral enrollment required; profile is an MSc candidate')
     if re.search(r'\b(senior|staff|principal|director|head of|lead)\b',title): hard.append('Senior role; extensive experience not demonstrated')
     if re.search(r'(?:minimum |at least |requires? )([5-9]|1\d)\+? years',text): hard.append('Extensive professional experience required')
@@ -76,20 +77,23 @@ def match(o, profile, weights):
     o['eligibility'] = 'restricted' if hard else 'likely' if global_access else 'unknown'
     o['eligibility_evidence'] = hard or (['Worldwide applicant coverage explicitly stated; confirm other requirements'] if global_access else ['Nationality, work authorization and start-date requirements must be checked with the organizer'])
     o['applicant_coverage'] = 'Global' if global_access else 'unknown'
-    if re.search(r'\b(phd|ph\.d|doctoral)\b',title+' '+o.get('source_category','').lower()): category, kind = 'research','PhD'
+    if re.search(r'\b(?:intern(?:ship)?s?|co-op)\b',title):category,kind=('research' if 'research' in title else 'industry'),'internship'
+    elif re.search(r'\b(phd|ph\.d|doctoral)\b',title+' '+o.get('source_category','').lower()): category, kind = 'research','PhD'
     elif re.search(r'hackathon|competition|challenge|accelerator|incubator',title): category,kind='innovation','competition'
     elif re.search(r'summer school|bootcamp|conference|workshop|travel grant',title): category,kind='development','training'
-    elif re.search(r'research|fellow|scholarship|studentship',title): category,kind='research','fellowship' if 'fellow' in title else 'research'
+    elif re.search(r'research|fellow|scholarship|studentship',title+' '+o.get('source_category','').lower()): category,kind='research','fellowship' if 'fellow' in title else 'assistantship' if 'assistant' in title else 'research'
     else: category,kind='industry','internship' if re.search(r'\b(?:intern(?:ship)?s?|graduate|student)\b',title) else 'job'
     o['category'],o['subcategory'] = category,kind
-    academic = .0 if hard else .6
+    academic = .0 if hard else .8 if o.get('assessment',{}).get('degree_in_progress_allowed') else .6
     career = 1 if kind in ('PhD','fellowship','internship') else .75 if category in ('research','innovation') else .5
-    technical = min(1, len(verified)*.24 + len(interests)*.12)
-    o['funding_status'] = 'funded' if o.get('funding_evidence') or re.search(r'(?<!not )fully[- ]funded|full scholarship',text) else 'unknown'
+    themes=[name for name,words in weights.get('themes',{}).items() if any(word in text for word in words)]
+    technical = min(1, len(verified)*.20 + len(interests)*.10 + len(themes)*.18)
+    verified_funding=o.get('assessment',{}).get('funding_level') in ('fully_funded','funded','paid') and bool(o.get('assessment',{}).get('funding_evidence'))
+    o['funding_status'] = 'funded' if verified_funding or o.get('funding_evidence') or re.search(r'(?<!not )fully[- ]funded|full scholarship',text) else 'unknown'
     score = round(weights['technical']*technical + weights['academic']*academic + weights['career']*career + weights['geographic']*(1 if global_access else .3) + weights['funding']*(1 if o['funding_status']=='funded' else .3))
-    if not verified and not interests: score=min(score,weights['minimum']-1)
+    if not verified and not interests and not themes: score=min(score,weights['minimum']-1)
     o['relevance_score'] = min(score,30) if hard else score
-    o['relevance_explanation'] = [f'Profile skills mentioned: {", ".join(verified) or "none"}', f'Research interests mentioned: {", ".join(interests) or "none"}',f'Career category: {category}; eligibility: {o["eligibility"]}', 'Score is prioritization, not an acceptance probability']
+    o['relevance_explanation'] = [f'Profile skills mentioned: {", ".join(verified) or "none"}', f'Research interests mentioned: {", ".join(interests) or "none"}',f'Aligned research themes: {", ".join(themes) or "none"}',f'Career category: {category}; eligibility: {o["eligibility"]}', 'Score is prioritization, not an acceptance probability']
     o['tags'] = sorted(set(verified+interests))
     o['skills_not_demonstrated'] = interests
     o['required_qualifications'] = 'unknown; consult original announcement'
@@ -100,9 +104,10 @@ def match(o, profile, weights):
     o['geographic_scope'] = (['Global'] if global_access else []) + ([o['host_continent']] if country!='unknown' else [])
     if country in ('Rwanda','Kenya','Uganda','Tanzania','Burundi','South Sudan'): o['geographic_scope'].append('East Africa')
     if country=='Rwanda': o['geographic_scope'].append('Rwanda')
-    return o
+    return apply_assessment(o,profile,weights)
 
 def relevant(o):
+    if o.get('source_id')=='hereon-research' and not re.search(r'PhD|doctoral|Doktorand|research|scientist|engineer|postdoc',o['title'],re.I):return False
     return bool(re.search(r'\b(?:ai|ml|machine learning|data|research\w*|scientist\w*|engineer\w*|phd|doctoral|intern(?:ship)?s?|fellow\w*|scholarship\w*|studentship\w*|hackathon\w*|competition\w*|innovation|grant\w*|accelerator\w*|bootcamp\w*|summer school)\b',o['title']+' '+o.get('source_category',''),re.I) or len(o.get('tags',[]))>=5)
 
 def normalize(raw, source, now):
@@ -111,6 +116,8 @@ def normalize(raw, source, now):
     if not o['title']: raise ValueError('Missing title')
     o['source_category']=plain(raw.get('source_category',''))
     o['funding_evidence']=plain(raw.get('funding_evidence',''))
+    if 'assessment' in raw:
+        o['assessment']=raw['assessment'];o['reviewed_at']=now;o['review_sources']=raw.get('review_sources',[url])
     if raw.get('detail_verified'):o['link_validation']='HTTP GET succeeded; opportunity detail parsed '+now
     if not o['deadline']:
         extracted = extract_deadline(o['description'])

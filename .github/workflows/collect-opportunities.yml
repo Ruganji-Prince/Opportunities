@@ -23,6 +23,8 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -r requirements.txt
+      - name: Backend regression tests
+        run: python scripts/check.py
       - name: Preserve comparable previous state
         run: cp -r data /tmp/radar-before
       - name: Collect independently from public sources

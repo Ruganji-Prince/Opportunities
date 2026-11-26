@@ -36,8 +36,8 @@
       "https://jobs.nottingham.ac.uk/rss/click.aspx"
     ],
     "intake": "unknown",
-    "last_updated": "2026-11-25T21:42:23.620749+00:00",
-    "last_verified": "2026-11-25T21:42:23.620749+00:00",
+    "last_updated": "2026-11-26T08:18:16.178911+00:00",
+    "last_verified": "2026-11-26T08:18:16.178911+00:00",
     "link_validation": "Source supplied URL; individual link not yet checked",
     "location": "United Kingdom",
     "organization": "University of Nottingham",
@@ -265,8 +265,8 @@
     ],
     "intake": "unknown",
     "last_updated": "2026-11-10T19:44:04.248573+00:00",
-    "last_verified": "2026-11-25T21:42:23.620749+00:00",
-    "link_validation": "HTTP GET succeeded; opportunity detail parsed 2026-11-25T21:42:23.620749+00:00",
+    "last_verified": "2026-11-26T08:18:16.178911+00:00",
+    "link_validation": "HTTP GET succeeded; opportunity detail parsed 2026-11-26T08:18:16.178911+00:00",
     "location": "unknown",
     "organization": "unknown",
     "original_url": "https://www.opportunitiesforafricans.com/the-korea-international-cooperation-agency-koica-scholarship-program-2027",
@@ -347,8 +347,8 @@
     ],
     "intake": "unknown",
     "last_updated": "2026-11-14T06:23:56.528275+00:00",
-    "last_verified": "2026-11-25T21:42:23.620749+00:00",
-    "link_validation": "HTTP GET succeeded; opportunity detail parsed 2026-11-25T21:42:23.620749+00:00",
+    "last_verified": "2026-11-26T08:18:16.178911+00:00",
+    "link_validation": "HTTP GET succeeded; opportunity detail parsed 2026-11-26T08:18:16.178911+00:00",
     "location": "unknown",
     "organization": "unknown",
     "original_url": "https://www.opportunitiesforafricans.com/heinrich-boll-foundation-scholarships-2026-2027",
@@ -427,7 +427,7 @@
     ],
     "intake": "unknown",
     "last_updated": "2026-11-07T17:10:27.136947+00:00",
-    "last_verified": "2026-11-25T21:42:23.620749+00:00",
+    "last_verified": "2026-11-26T08:18:16.178911+00:00",
     "link_validation": "Source supplied URL; individual link not yet checked",
     "location": "Flexible: Poland, Spain, Portugal, Estonia, Romania, South Africa, and Kenya",
     "organization": "One Acre Fund",
@@ -511,7 +511,7 @@
     ],
     "intake": "unknown",
     "last_updated": "2026-11-07T17:10:27.136947+00:00",
-    "last_verified": "2026-11-25T21:42:23.620749+00:00",
+    "last_verified": "2026-11-26T08:18:16.178911+00:00",
     "link_validation": "Source supplied URL; individual link not yet checked",
     "location": "Nairobi, Kenya",
     "organization": "One Acre Fund",
@@ -590,8 +590,8 @@
     ],
     "intake": "unknown",
     "last_updated": "2026-11-16T22:02:19.584768+00:00",
-    "last_verified": "2026-11-25T21:42:23.620749+00:00",
-    "link_validation": "HTTP GET succeeded; opportunity detail parsed 2026-11-25T21:42:23.620749+00:00",
+    "last_verified": "2026-11-26T08:18:16.178911+00:00",
+    "link_validation": "HTTP GET succeeded; opportunity detail parsed 2026-11-26T08:18:16.178911+00:00",
     "location": "unknown",
     "organization": "unknown",
     "original_url": "https://www.opportunitiesforafricans.com/the-francesouth-africa-scholarship-programme-2027-for-southern-africans-to-study-in-france",
@@ -667,8 +667,8 @@
     ],
     "intake": "unknown",
     "last_updated": "2026-11-25T21:42:23.620749+00:00",
-    "last_verified": "2026-11-25T21:42:23.620749+00:00",
-    "link_validation": "HTTP GET succeeded; opportunity detail parsed 2026-11-25T21:42:23.620749+00:00",
+    "last_verified": "2026-11-26T08:18:16.178911+00:00",
+    "link_validation": "HTTP GET succeeded; opportunity detail parsed 2026-11-26T08:18:16.178911+00:00",
     "location": "unknown",
     "organization": "unknown",
     "original_url": "https://www.opportunitiesforafricans.com/commonwealth-phd-scholarships-2027-2028",
@@ -3253,7 +3253,7 @@
     ],
     "intake": "unknown",
     "last_updated": "2026-11-07T20:32:09.988314+00:00",
-    "last_verified": "2026-11-25T21:42:23.620749+00:00",
+    "last_verified": "2026-11-26T08:18:16.178911+00:00",
     "link_validation": "Source supplied URL; individual link not yet checked",
     "location": "Germany",
     "organization": "Helmholtz-Zentrum Hereon",
@@ -3285,7 +3285,7 @@
       "https://www.hereon.de/innovation_transfer/communication_media/rss/rss_jobs_helmholtz.en.xml"
     ],
     "review_status": "",
-    "reviewed_at": "2026-11-25T21:42:23.620749+00:00",
+    "reviewed_at": "2026-11-26T08:18:16.178911+00:00",
     "salary": "unknown",
     "scholarship_information": "unknown",
     "skills_not_demonstrated": [
@@ -3417,6 +3417,95 @@
       "simulation"
     ],
     "title": "PhD position on Physics-Guided Digital Twin Development for Composition-Process-Structure-Property Modeling of Magnesium Alloys"
+  },
+  {
+    "applicant_coverage": "unknown",
+    "application_opening_date": null,
+    "application_status": "unknown",
+    "application_url": "https://fibh12o.fundanetsuite.com/convocatoriaspropias/es/Convocatorias/VerConvocatoria/38",
+    "assessment": {
+      "conditions": [
+        "Nationality, qualifications and intended start date require organizer confirmation"
+      ],
+      "qualifications": "d Other Education Level Undergraduate Skills/Qualifications Academic qualification: Higher National Diploma in Healthcare Documentation and Administration or a qualification from any other Higher National Diploma course relevant to the duties of the post. Specific Requirements S"
+    },
+    "category": "research",
+    "deadline": "2026-11-12T22:59:59+00:00",
+    "deadline_evidence": "EURAXESS Application Deadline: 12 Nov 2026 - 23:59 (Europe/Madrid); datetime=2026-11-12T22:59:59+00:00",
+    "deadline_precision": "timestamp",
+    "deadline_status": "Expired",
+    "deadline_timezone": "Europe/Madrid",
+    "description": "11 Nov 2026 Job Information Organisation/Company FUNDACION DE INVESTIGACION BIOMEDICA HOSPITAL 12 DE OCTUBRE Research Field Other Researcher Profile Other Profession Positions Research Support Positions Application Deadline 12 Nov 2026 - 23:59 (Europe/Madrid) Country Spain Type of Contract Permanent Job Status Full-time Hours Per Week 37,5 Offer Starting Date 11 Nov 2026 Is the job funded through the EU Research Framework Programme? Other EU programme Reference Number 2611/12 Is the Job related to staff position within a Research Infrastructure? No Offer Description DUTIES: To provide administrative and technical support for the management and implementation of national and international research and innovation projects. Assist in the preparation and submission of scientific publications to specialist journals and in monitoring the editorial processes. Organise scientific meetings and events, including drawing up agendas, preparing minutes and following up on tasks and agreements. Support the preparation of reports, annual reports, deliverables and technical documentation for projects. Assist with financial monitoring, budgetary control and the justification of expenditure. Provide administrative support in the preparation and submission of proposals for new calls for funding. Keep project documentation and databases up to date Facilitate coordination with the Principal Investigator, researchers, and national and international institutions and partners. Support the organisation of training and outreach activities, as well as the management of research data. Where to apply Website https://fibh12o.fundanetsuite.com/convocatoriaspropias/es/Convocatorias/VerConv… Requirements Research Field Other Education Level Undergraduate Skills/Qualifications Academic qualification: Higher National Diploma in Healthcare Documentation and Administration or a qualification from any other Higher National Diploma course relevant to the duties of the post. Specific Requirements Specific training: Training in research or project management would be an advantage. Experience: - Management of research and/or innovation projects, including the preparation of progress reports, reports and budgets, financial monitoring, document management, quality control and the justification of expenditure. - Management of scientific publications, including their preparation and submission to specialist journals. - Organising and coordinating meetings, drafting minutes, monitoring tasks and liaising with national and international researchers and partners. - Organisation and coordination of events and training and outreach activities. - Management of research data, including data entry and the use of databases such as Experience in managing research and/or innovation projects, including the preparation of progress reports, reports and budgets, financial monitoring, document management, quality control and the justification of expenditure. Languages ENGLISH Level Excellent Additional Information Work Location(s) Number of offers available 1 Company/Institute FUNDACION BIOMEDICA HOSPITAL 12 DE OCTUBRE Country Spain State/Province MADRID City MADRID Postal Code 28041 Street AVDA DE CORDOBA S/N Geofield Contact State/Province Madrid City Sin especificar Website https://fibh12o.fundanetsuite.com/convocatoriaspropias/es/Convocatorias/VerConvocatoria/38 Street AVDA. DE CORDOBA, S/N nº 6ª planta Bloque D Postal Code 28041 E-Mail fpersonal@h12o.es Phone 917792626 STATUS: EXPIRED Apply now Share this page",
+    "eligibility": "unknown",
+    "eligibility_conditions": [
+      "Nationality, qualifications and intended start date require organizer confirmation"
+    ],
+    "eligibility_evidence": [
+      "Nationality, work authorization and start-date requirements must be checked with the organizer",
+      "Nationality, qualifications and intended start date require organizer confirmation"
+    ],
+    "eligible_nationalities": "unknown",
+    "first_discovered": "2026-11-26T08:18:16.178911+00:00",
+    "fully_funded_verified": false,
+    "funding_amount": null,
+    "funding_currency": null,
+    "funding_evidence": "",
+    "funding_level": "unknown",
+    "funding_status": "unknown",
+    "funding_verified": false,
+    "geographic_scope": [
+      "Europe"
+    ],
+    "graduation_compatibility": "needs_confirmation",
+    "host_continent": "Europe",
+    "host_country": "Spain",
+    "id": "4fb9413b34cddd2ae9e6",
+    "intake": "unknown",
+    "last_updated": "2026-11-26T08:18:16.178911+00:00",
+    "last_verified": "2026-11-26T08:18:16.178911+00:00",
+    "link_validation": "HTTP GET succeeded; opportunity detail parsed 2026-11-26T08:18:16.178911+00:00",
+    "location": "Spain",
+    "organization": "FUNDACION DE INVESTIGACION BIOMEDICA HOSPITAL 12 DE OCTUBRE",
+    "original_url": "https://euraxess.ec.europa.eu/jobs/479562",
+    "provenance": {
+      "deadline": "EURAXESS Application Deadline: 12 Nov 2026 - 23:59 (Europe/Madrid); datetime=2026-11-12T22:59:59+00:00",
+      "listing": "https://euraxess.ec.europa.eu/job-feed"
+    },
+    "recommendation_group": "research",
+    "recommendation_score": 55,
+    "relevance_explanation": [
+      "Profile skills mentioned: none",
+      "Research interests mentioned: health",
+      "Aligned research themes: biomedical_ai",
+      "Career category: research; eligibility: unknown",
+      "Score is prioritization, not an acceptance probability",
+      "Confirm the listed eligibility and availability conditions before applying"
+    ],
+    "relevance_score": 46,
+    "remote": "unknown",
+    "required_qualifications": "d Other Education Level Undergraduate Skills/Qualifications Academic qualification: Higher National Diploma in Healthcare Documentation and Administration or a qualification from any other Higher National Diploma course relevant to the duties of the post. Specific Requirements S",
+    "required_skills": "unknown",
+    "review_conflicts": [],
+    "review_sources": [
+      "https://euraxess.ec.europa.eu/jobs/479562"
+    ],
+    "review_status": "",
+    "reviewed_at": "2026-11-26T08:18:16.178911+00:00",
+    "salary": "unknown",
+    "scholarship_information": "unknown",
+    "skills_not_demonstrated": [
+      "health"
+    ],
+    "source_category": "",
+    "source_id": "euraxess",
+    "source_name": "EURAXESS research jobs",
+    "start_date": null,
+    "startup_requirements": "not applicable",
+    "subcategory": "research",
+    "tags": [
+      "health"
+    ],
+    "title": "Research Administrator."
   },
   {
     "applicant_coverage": "unknown",
@@ -6382,8 +6471,8 @@
     ],
     "intake": "unknown",
     "last_updated": "2026-11-25T21:42:23.620749+00:00",
-    "last_verified": "2026-11-25T21:42:23.620749+00:00",
-    "link_validation": "HTTP GET succeeded; opportunity detail parsed 2026-11-25T21:42:23.620749+00:00",
+    "last_verified": "2026-11-26T08:18:16.178911+00:00",
+    "link_validation": "HTTP GET succeeded; opportunity detail parsed 2026-11-26T08:18:16.178911+00:00",
     "location": "unknown",
     "organization": "unknown",
     "original_url": "https://www.opportunitiesforafricans.com/2027-african-development-bank-group-shanghai-ocean-university-scholarship-bachelor-masters-and-phd-program",
@@ -10407,5 +10496,779 @@
     "subcategory": "competition",
     "tags": [],
     "title": "CALL FOR APPLICATIONS 27 th October 2026 Dean of the Faculty of Medicine of Wroclaw Medical University announces an open Competition for the position of Assista"
+  },
+  {
+    "applicant_coverage": "unknown",
+    "application_opening_date": null,
+    "application_status": "unknown",
+    "application_url": "https://www.jobbnorge.no/en/available-jobs/job/310544/doctoral-research-fellowship-in-multi-omics-at-centre-for-precision-psychiatry",
+    "assessment": {
+      "conditions": [
+        "Nationality, qualifications and intended start date require organizer confirmation"
+      ],
+      "qualifications": "earch Field Medical sciences Education Level Master Degree or equivalent Additional Information Work Location(s) Number of offers available 1 Company/Institute Institute of Clinical Medicine (Klinmed) Country Norway Geofield Contact City Oslo Website https://www.med.uio."
+    },
+    "category": "research",
+    "deadline": "2026-11-25T22:00:00+00:00",
+    "deadline_evidence": "EURAXESS Application Deadline: 25 Nov 2026 - 23:00 (Europe/Oslo); datetime=2026-11-25T22:00:00+00:00",
+    "deadline_precision": "timestamp",
+    "deadline_status": "Expired",
+    "deadline_timezone": "Europe/Oslo",
+    "description": "7 Nov 2026 Job Information Organisation/Company University of Oslo Research Field Medical sciences Researcher Profile First Stage Researcher (R1) Positions PhD Positions Application Deadline 25 Nov 2026 - 23:00 (Europe/Oslo) Country Norway Type of Contract Temporary Job Status Full-time Hours Per Week 37.5 Is the job funded through the EU Research Framework Programme? Not funded by a EU programme Is the Job related to staff position within a Research Infrastructure? No Offer Description The available position is part of the Back2Future project, entitled Multimodal metabolic markers for mechanisms and predictive trajectories of Alzheimer’s disease, funded by the Research Council of Norway's TOPPFORSK programme and led by Professor Srdjan Djurovic. The project aims to identify heritable, early metabolic and protein biomarkers in blood that can predict the risk of Alzheimer's disease decades before symptoms appear, by combining metabolomics and proteomics with genetics, brain MRI, cognition and health registry data from large Norwegian and Nordic cohorts. To achieve this goal, the researcher hired for this doctoral research fellowship position will work with the project's datasets, analytical methodology, and computational tools, including state-of-the-art data storage and research infrastructure hosted at the Services for Sensitive Data (TSD). The PhD fellow will work with large-scale analytical tools to integrate multi-omics with brain imaging data to identify early biomarkers of Alzheimer's disease risk and contribute to development of a personalized prediction algorithm. For more information and how to apply: https://www.jobbnorge.no/en/available-jobs/job/310544/doctoral-research-fellowship-in-multi-omics-at-centre-for-precision-psychiatry Where to apply Website https://www.jobbnorge.no/en/available-jobs/job/310544/doctoral-research-fellows… Requirements Research Field Medical sciences Education Level Master Degree or equivalent Additional Information Work Location(s) Number of offers available 1 Company/Institute Institute of Clinical Medicine (Klinmed) Country Norway Geofield Contact City Oslo Website https://www.med.uio.no/klinmed/english/ Street PO box 1072 Blindern Postal Code NO-0316 E-Mail srdjan.djurovic@medisin.uio.no srdjan.djurovic@medisin.uio.no STATUS: EXPIRED Apply now Share this page",
+    "eligibility": "unknown",
+    "eligibility_conditions": [
+      "Nationality, qualifications and intended start date require organizer confirmation"
+    ],
+    "eligibility_evidence": [
+      "Nationality, work authorization and start-date requirements must be checked with the organizer",
+      "Nationality, qualifications and intended start date require organizer confirmation"
+    ],
+    "eligible_nationalities": "unknown",
+    "first_discovered": "2026-11-22T06:48:43.903655+00:00",
+    "fully_funded_verified": false,
+    "funding_amount": null,
+    "funding_currency": null,
+    "funding_evidence": "",
+    "funding_level": "unknown",
+    "funding_status": "unknown",
+    "funding_verified": false,
+    "geographic_scope": [],
+    "graduation_compatibility": "needs_confirmation",
+    "host_continent": "unknown",
+    "host_country": "unknown",
+    "id": "fd44827af63ad4a1893c",
+    "intake": "unknown",
+    "last_updated": "2026-11-22T06:48:43.903655+00:00",
+    "last_verified": "2026-11-22T06:48:43.903655+00:00",
+    "link_validation": "HTTP GET succeeded; opportunity detail parsed 2026-11-22T06:48:43.903655+00:00",
+    "location": "Norway",
+    "organization": "University of Oslo",
+    "original_url": "https://euraxess.ec.europa.eu/jobs/478769",
+    "provenance": {
+      "deadline": "EURAXESS Application Deadline: 25 Nov 2026 - 23:00 (Europe/Oslo); datetime=2026-11-25T22:00:00+00:00",
+      "listing": "https://euraxess.ec.europa.eu/job-feed"
+    },
+    "recommendation_group": "doctoral",
+    "recommendation_score": 66,
+    "relevance_explanation": [
+      "Profile skills mentioned: none",
+      "Research interests mentioned: multimodal, health",
+      "Aligned research themes: scientific_materials",
+      "Career category: research; eligibility: unknown",
+      "Score is prioritization, not an acceptance probability",
+      "Doctoral research is a primary career goal",
+      "Confirm the listed eligibility and availability conditions before applying"
+    ],
+    "relevance_score": 54,
+    "remote": "unknown",
+    "required_qualifications": "earch Field Medical sciences Education Level Master Degree or equivalent Additional Information Work Location(s) Number of offers available 1 Company/Institute Institute of Clinical Medicine (Klinmed) Country Norway Geofield Contact City Oslo Website https://www.med.uio.",
+    "required_skills": "unknown",
+    "review_conflicts": [],
+    "review_sources": [
+      "https://euraxess.ec.europa.eu/jobs/478769"
+    ],
+    "review_status": "",
+    "reviewed_at": "2026-11-22T06:48:43.903655+00:00",
+    "salary": "unknown",
+    "scholarship_information": "unknown",
+    "skills_not_demonstrated": [
+      "multimodal",
+      "health"
+    ],
+    "source_category": "",
+    "source_id": "euraxess",
+    "source_name": "EURAXESS research jobs",
+    "start_date": null,
+    "startup_requirements": "not applicable",
+    "subcategory": "PhD",
+    "tags": [
+      "health",
+      "multimodal"
+    ],
+    "title": "Doctoral Research Fellowship in Multi-Omics at Centre for Precision Psychiatry (ref 310544)"
+  },
+  {
+    "applicant_coverage": "unknown",
+    "application_opening_date": null,
+    "application_status": "unknown",
+    "application_url": "https://www.opportunitiesforafricans.com/the-ilo-better-regional-migration-management-brmm-programme-university-essay-writing-competition-2026",
+    "category": "innovation",
+    "deadline": "2026-11-25",
+    "deadline_evidence": "Application Deadline: 25 November 2026 [exact time and timezone not verified]",
+    "deadline_precision": "date",
+    "deadline_status": "Expired",
+    "deadline_timezone": null,
+    "description": "319 Application Deadline: 25 November 2026 Applications are now open for the 2026 ILO Better Regional Migration Management (BRMM) Programme University Essay Writing Competition. The International Labour Organization (ILO), through the Better Regional Migration Management (BRMM) Programme funded by the UK Foreign, Commonwealth and Development Office (FCDO), supports countries in the East and Horn of Africa region to strengthen labour migration governance and to promote safe, regular, orderly, and rights-based labour mobility. As part of this work, BRMM supports universities as places where evidence is produced and where young people form their views on migration, engaging students, faculty and researchers across the region. Purpose To give young people a voice on labour migration, to encourage informed public debate on safe and regular migration, and to bring student ideas to tripartite partners and senior officials attending the meeting. Requirements Students currently enrolled in a bachelor’s or postgraduate programme at a university in one of the East and Horn of Africa countries covered by BRMM (Djibouti, Ethiopia, Kenya, Somalia, South Sudan, Sudan, Tanzania and Uganda). Aged 18 or over on the closing date. Individual entries only. One essay per student. ILO staff, consultants and their immediate family, and members of the judging panel cannot enter. Theme and suggested questions “Young Voices on Safe Migration for Work” Essays may address one of these questions or a related one: What measures would help young people in your country access decent work opportunities, both locally and/or abroad? What should young people check and understand before accepting a job offer in another country? Why do some young people choose irregular routes, and what are the risks and costs for them and their families? What can governments, employers and recruitment agencies do to ensure that young people migrate safely and access fair working conditions abroad? What support do young people/returnees need when they return home to rebuild their lives, develop their skills and find decent work? Essay requirements English and/or French languages are accepted 1,200 to 1,500 words, excluding references. Original, unpublished work. Copied text and text produced by any AI tools will be disqualified. Clear argument supported by evidence, with sources listed. At least one practical recommendation. Word or PDF file. The essay itself must not show the author’s name, so it can be judged anonymously Prizes First place: an invitation to the Fifth LMAG in Zanzibar, 16 to 18 December 2026, with travel, accommodation, DSA, and visa costs covered by the ILO, and the chance to present the essay to ministers and senior officials. Second place: a plaque and publication of the essay on the ILO and regional websites. Third place: a certificate and publication of the essay on the ILO website. How to enter Send two attachments to [email protected] with the subject line “Essay Competition, Country”: The essay. An entry form with name, university, faculty, year of study, country, email, phone number, a copy of the student ID, and a signed statement that the work is original and that the author agrees to the conditions below. Key Dates Call opens: 3 November 2026 Closing date: 25 November 2026, 23:59 East Africa Time Judging: 26 to 27 November 2026 Winners notified: 30 November 2026 Awards at the Fifth LMAG, Zanzibar: 18 December 2026 For More Information: Visit the Official Webpage of the ILO Better Regional Migration Management (BRMM) Programme University Essay Writing Competition",
+    "eligibility": "unknown",
+    "eligibility_conditions": [],
+    "eligibility_evidence": [
+      "Nationality, work authorization and start-date requirements must be checked with the organizer"
+    ],
+    "eligible_nationalities": "unknown",
+    "first_discovered": "2026-11-07T16:43:33.763581+00:00",
+    "fully_funded_verified": false,
+    "funding_amount": null,
+    "funding_currency": null,
+    "funding_evidence": "",
+    "funding_level": "unknown",
+    "funding_status": "funded",
+    "funding_verified": false,
+    "geographic_scope": [],
+    "graduation_compatibility": "not_applicable",
+    "host_continent": "unknown",
+    "host_country": "unknown",
+    "id": "8188e8dce5f004b32995",
+    "identity_urls": [
+      "https://www.opportunitiesforafricans.com/the-ilo-better-regional-migration-management-brmm-programme-university-essay-writing-competition-2026"
+    ],
+    "intake": "unknown",
+    "last_updated": "2026-11-25T21:42:23.620749+00:00",
+    "last_verified": "2026-11-26T08:18:16.178911+00:00",
+    "link_validation": "HTTP GET succeeded; opportunity detail parsed 2026-11-26T08:18:16.178911+00:00",
+    "location": "unknown",
+    "organization": "unknown",
+    "original_url": "https://www.opportunitiesforafricans.com/the-ilo-better-regional-migration-management-brmm-programme-university-essay-writing-competition-2026",
+    "provenance": {
+      "deadline": "Application Deadline: 25 November 2026 [exact time and timezone not verified]",
+      "listing": "https://www.opportunitiesforafricans.com/category/contests/feed/"
+    },
+    "recommendation_group": "innovation",
+    "recommendation_score": 43,
+    "relevance_explanation": [
+      "Profile skills mentioned: none",
+      "Research interests mentioned: none",
+      "Aligned research themes: none",
+      "Career category: innovation; eligibility: unknown",
+      "Score is prioritization, not an acceptance probability"
+    ],
+    "relevance_score": 43,
+    "remote": "unknown",
+    "required_qualifications": "bachelor’s or postgraduate programme at a university in one of the East and Horn of Africa countries covered by BRMM (Djibouti, Ethiopia, Kenya, Somalia, South Sudan, Sudan, Tanzania and Uganda)",
+    "required_skills": "unknown",
+    "review_conflicts": [],
+    "review_status": "",
+    "salary": "unknown",
+    "scholarship_information": "unknown",
+    "skills_not_demonstrated": [],
+    "source_category": "Contests; 2026 ILO Better Regional Migration Management (BRMM) Programme University Essay Writing Competition.; The ILO Better Regional Migration Management (BRMM) Programme University Essay Writing Competition; the-ilo-better-regional-migration-management-brmm-programme-university-essay-writing-competition; the-ilo-better-regional-migration-management-brmm-programme-university-essay-writing-competition-2026",
+    "source_id": "ofa-contests",
+    "source_name": "Opportunities for Africans â€” innovation competitions",
+    "start_date": null,
+    "startup_requirements": "unknown; check company, team and prototype requirements",
+    "subcategory": "competition",
+    "tags": [],
+    "title": "The ILO Better Regional Migration Management (BRMM) Programme University Essay Writing Competition 2026 (Fully Funded to Fifth LMAG in Zanzibar)"
+  },
+  {
+    "applicant_coverage": "unknown",
+    "application_opening_date": null,
+    "application_status": "unknown",
+    "application_url": "https://www.opportunitiesforafricans.com/the-ilo-better-regional-migration-management-brmmprogramme-journalism-and-storytelling-competition-2026",
+    "category": "innovation",
+    "deadline": "2026-11-25",
+    "deadline_evidence": "Application Deadline: 25 November 2026 [exact time and timezone not verified]",
+    "deadline_precision": "date",
+    "deadline_status": "Expired",
+    "deadline_timezone": null,
+    "description": "368 Application Deadline: 25 November 2026 Applications are now open for the 2026 ILO Better Regional Migration Management (BRMM)Programme Journalism and Storytelling Competition. The International Labour Organization (ILO), through the Better Regional Migration Management (BRMM) Programme funded by the UK Foreign, Commonwealth and Development Office (FCDO), supports countries in the East and Horn of Africa region to strengthen labour migration governance and to promote safe, regular, orderly, and rightsbased labour mobility. As part of this work, BRMM supports universities as places where evidence is produced and where young people form their views on migration, engaging students, faculty and researchers across the region. Purpose To recognise quality media work that informs the public on safe and regular labour migration, to encourage responsible reporting on migrant workers, and to bring the media’s voice into the discussions at the Fifth LMAG. Requirements Journalists, photographers, filmmakers and content creators based in one of the East and Horn of Africa countries covered by BRMM (Djibouti, Ethiopia, Kenya, Somalia, South Sudan, Tanzania and Uganda). Aged 18 or over on the closing date. Individual or team entries. For a team, name one lead contact. Only one team member can travel if the entry wins first place. A maximum of two entries per person or team. ILO staff, consultants and their immediate family, and members of the judging panel cannot enter. Theme “Safe and regular labour migration: the stories behind the journey.” The competition invites journalists and storytellers to explore the realities of labour migration through compelling, evidence-based stories that highlight the experiences, challenges and contributions of migrant workers. Entries may explore, but are not limited to, the following topics: Pathways to overseas employment: How people access jobs abroad and what safe, regular and well-managed labour migration looks like in practice. Risks of irregular migration: The dangers of irregular migration, including exploitation, human trafficking and the practices of unlicensed or unscrupulous recruiters. Migrant workers’ experiences: The realities of working abroad and the challenges and opportunities people face upon returning home. Young people’s migration decisions: Why young people consider working abroad, how they make migration decisions, and the information and support they need to make informed choices. The contribution of migrant workers: How migrant workers contribute to their families, communities and national economies, including through skills, knowledge and financial resources. Categories and requirements All categories are judged against the same criteria, and one overall winner is selected. Story (print, online or audio): original article or feature of 800 to 1,500 words, or an audio piece of up to 8 minutes. Photography: a photo story of one to five images with captions of up to 50 words each, in high resolution. Video: up to 8 – 10 minutes, with subtitles in English if the language is not English. Animation: up to 3 – 5 minutes, with subtitles in English if the language is not English. General requirements: Original work, produced or first published between 1 January 2026 and the closing date. Previously entered competition winners cannot be resubmitted. English language, or French with an English (if French) summary or subtitles. Work generated by AI tools will be disqualified. Basic editing tools are acceptable. Facts must be accurate and sourced. Do not identify trafficking survivors, children or people at risk without their written, informed consent. Show migrant workers with dignity and avoid sensationalism. Prizes First place: an invitation to the Fifth LMAG in Zanzibar, 16 to 18 December 2026, with travel, accommodation, DSA, and visa costs covered by the ILO, and a place on the youth, media and research panel with a migrant worker. Second place: a plaque and publication of the work on ILO and regional channels. Third place: a certificate and publication of the work on ILO channels How to enter Send two attachments to [email protected] with the subject line “Media Award, Country”: The entry, or a link to it, with a short description of up to 150 words. An entry form with name, organisation if any, country, category, contact details, a copy of an identity document, and a signed statement that the work is original and that the consent of people shown has been obtained. Submission Timeline Call opens: 3 November 2026 Closing date: 25 November 2026, 23:59 East Africa Time Judging: 26 to 27 November 2026 Winners notified: 30 November 2026 Awards at the Fifth LMAG, Zanzibar: 18 December 2026 For More Information: Visit the Official Webpage of the ILO Better Regional Migration Management (BRMM)Programme Journalism and Storytelling Competition",
+    "eligibility": "unknown",
+    "eligibility_conditions": [],
+    "eligibility_evidence": [
+      "Nationality, work authorization and start-date requirements must be checked with the organizer"
+    ],
+    "eligible_nationalities": "unknown",
+    "first_discovered": "2026-11-07T16:43:33.763581+00:00",
+    "fully_funded_verified": false,
+    "funding_amount": null,
+    "funding_currency": null,
+    "funding_evidence": "",
+    "funding_level": "unknown",
+    "funding_status": "funded",
+    "funding_verified": false,
+    "geographic_scope": [],
+    "graduation_compatibility": "not_applicable",
+    "host_continent": "unknown",
+    "host_country": "unknown",
+    "id": "e9d243555122c6296077",
+    "identity_urls": [
+      "https://www.opportunitiesforafricans.com/the-ilo-better-regional-migration-management-brmmprogramme-journalism-and-storytelling-competition-2026"
+    ],
+    "intake": "unknown",
+    "last_updated": "2026-11-25T21:42:23.620749+00:00",
+    "last_verified": "2026-11-26T08:18:16.178911+00:00",
+    "link_validation": "HTTP GET succeeded; opportunity detail parsed 2026-11-26T08:18:16.178911+00:00",
+    "location": "unknown",
+    "organization": "unknown",
+    "original_url": "https://www.opportunitiesforafricans.com/the-ilo-better-regional-migration-management-brmmprogramme-journalism-and-storytelling-competition-2026",
+    "provenance": {
+      "deadline": "Application Deadline: 25 November 2026 [exact time and timezone not verified]",
+      "listing": "https://www.opportunitiesforafricans.com/category/contests/feed/"
+    },
+    "recommendation_group": "innovation",
+    "recommendation_score": 43,
+    "relevance_explanation": [
+      "Profile skills mentioned: none",
+      "Research interests mentioned: none",
+      "Aligned research themes: none",
+      "Career category: innovation; eligibility: unknown",
+      "Score is prioritization, not an acceptance probability"
+    ],
+    "relevance_score": 43,
+    "remote": "unknown",
+    "required_qualifications": "unknown; consult original announcement",
+    "required_skills": "unknown",
+    "review_conflicts": [],
+    "review_status": "",
+    "salary": "unknown",
+    "scholarship_information": "unknown",
+    "skills_not_demonstrated": [],
+    "source_category": "Contests; 2026 ILO Better Regional Migration Management (BRMM)Programme Journalism and Storytelling Competition.; Better Regional Migration Management (BRMM) Programme; The ILO Better Regional Migration Management (BRMM)Programme Journalism and Storytelling Competition; the-ilo-better-regional-migration-management-brmmprogramme-journalism-and-storytelling-competition; the-ilo-better-regional-migration-management-brmmprogramme-journalism-and-storytelling-competition-2026",
+    "source_id": "ofa-contests",
+    "source_name": "Opportunities for Africans â€” innovation competitions",
+    "start_date": null,
+    "startup_requirements": "unknown; check company, team and prototype requirements",
+    "subcategory": "competition",
+    "tags": [],
+    "title": "The ILO Better Regional Migration Management (BRMM)Programme Journalism and Storytelling Competition 2026 (Fully Funded to the Fifth LMAG in Zanzibar)"
+  },
+  {
+    "applicant_coverage": "unknown",
+    "application_opening_date": null,
+    "application_status": "unknown",
+    "application_url": "https://www.dfg.de/de/ueber-uns/geschaeftsstelle/karriereseite/409132-409132",
+    "category": "research",
+    "deadline": "2026-11-25",
+    "deadline_evidence": "Bewerbungsfrist: 25.11.2026; time unspecified",
+    "deadline_precision": "date",
+    "deadline_status": "Expired",
+    "deadline_timezone": null,
+    "description": "Die Universität Duisburg-Essen an der Fakultät für Physik sucht zum nächstmöglichen Zeitpunkt eine*n Doktorand*in für die Arbeitsgruppe \"Multiskalensimulation für Erdoberflächenprozesse\". Bewerbungsfrist: 25.11.2026 Einstellungstermin: zum nächstmöglichen Zeitpunkt Ort: Universität Duisburg-Essen, Campus Duisburg Weitere Informationen Zur Website",
+    "eligibility": "unknown",
+    "eligibility_conditions": [],
+    "eligibility_evidence": [
+      "Nationality, work authorization and start-date requirements must be checked with the organizer"
+    ],
+    "eligible_nationalities": "unknown",
+    "first_discovered": "2026-11-07T20:32:09.988314+00:00",
+    "fully_funded_verified": false,
+    "funding_amount": null,
+    "funding_currency": null,
+    "funding_evidence": "",
+    "funding_level": "unknown",
+    "funding_status": "unknown",
+    "funding_verified": false,
+    "geographic_scope": [],
+    "graduation_compatibility": "needs_confirmation",
+    "host_continent": "unknown",
+    "host_country": "unknown",
+    "id": "65399801ed2a15a0ef5d",
+    "identity_urls": [
+      "https://www.dfg.de/de/ueber-uns/geschaeftsstelle/karriereseite/409130-409130",
+      "https://www.dfg.de/de/ueber-uns/geschaeftsstelle/karriereseite/409132-409132"
+    ],
+    "intake": "unknown",
+    "last_updated": "2026-11-25T21:42:23.620749+00:00",
+    "last_verified": "2026-11-25T21:42:23.620749+00:00",
+    "link_validation": "Source supplied URL; individual link not yet checked",
+    "location": "unknown",
+    "organization": "University of Duisburg-Essen",
+    "original_url": "https://www.dfg.de/de/ueber-uns/geschaeftsstelle/karriereseite/409132-409132",
+    "provenance": {
+      "deadline": "Bewerbungsfrist: 25.11.2026; time unspecified",
+      "listing": "https://www.dfg.de/service/rss/de/325058/feed.rss"
+    },
+    "recommendation_group": "research",
+    "recommendation_score": 51,
+    "relevance_explanation": [
+      "Profile skills mentioned: none",
+      "Research interests mentioned: none",
+      "Aligned research themes: engineering_systems",
+      "Career category: research; eligibility: unknown",
+      "Score is prioritization, not an acceptance probability"
+    ],
+    "relevance_score": 42,
+    "remote": "unknown",
+    "required_qualifications": "unknown; consult original announcement",
+    "required_skills": "unknown",
+    "review_conflicts": [],
+    "review_status": "",
+    "salary": "unknown",
+    "scholarship_information": "unknown",
+    "skills_not_demonstrated": [],
+    "source_category": "research",
+    "source_id": "dfg-research",
+    "source_name": "DFG-funded doctoral research",
+    "start_date": null,
+    "startup_requirements": "not applicable",
+    "subcategory": "research",
+    "tags": [],
+    "title": "Doktorand*in (m, f, x) für die Arbeitsgruppe \"Multiskalensimulation für Erdoberflächenprozesse\" (3Jahre, TV-L 13)"
+  },
+  {
+    "applicant_coverage": "unknown",
+    "application_opening_date": null,
+    "application_status": "unknown",
+    "application_url": "https://www.hereon.de/career/vacancies/030981/index.php.en",
+    "assessment": {
+      "conditions": [
+        "Confirm degree completion and start-date flexibility with the employer"
+      ],
+      "funding_evidence": "llective agreement of the public service and remuneration up to EG 13 (according to EntgO Bund) - Very good work-life balance; options for mobile and flexible work - A green campus on the Elbe River, well-connected with Hamburg (public transport), subsidy for the Deutschlandti",
+      "funding_level": "paid",
+      "qualifications": "PhD"
+    },
+    "category": "research",
+    "deadline": "2026-11-25",
+    "deadline_evidence": "Hereon CLOSING_DATE: 25.11.2026; description: Application deadline: 25 November, 2026 [exact time and timezone not verified]",
+    "deadline_precision": "date",
+    "deadline_status": "Expired",
+    "deadline_timezone": null,
+    "description": "Postdoctoral Researcher: Localized Electrochemistry, SECM, for Unraveling Degradation of Light Metals JobID: 1082 Location: Geesthacht Application deadline: 25 November, 2026 Metal degradation can be a boon or a bane, depending on the application and on how well we can control it. A corroding car component is a safety risk. A biodegradable magnesium implant that dissolves at exactly the right rate spares patients a second surgery. An aqueous battery lives or dies depending on what happens at its electrodes. At the Department of Electrochemistry and Big Data we unravel degradation pathways of light metals used in structural applications, medical devices and aqueous batteries. Since metal degradation is governed by interface reactions, local electrochemical methods, which measure the concentrations of species generated or consumed at the metal/electrolyte interface, provide valuable insight into electrochemical degradation mechanisms. This position is created to employ a talented and motivated scientist able to run local electrochemical measurements using scanning electrochemical microscopy (SECM) and scanning electrochemical cell microscopy (SECCM). You will investigate how metals degrade in electrolytes ranging from simple model solutions to complex, physiologically relevant media. You will combine commercial and self-made amperometric and potentiometric micro-probes and micro-optodes to separate anodic and cathodic degradation pathways. You will also correlate your electrochemical data with surface chemistry and morphology. We are offering a 3-year position, as soon as possible, as a Post-Doctoral researcher in the field of localized electro­analytical analysis. In principle, the position is full-time (39 h/week) and will be located in Hereon's main campus, in Geesthacht (near Hamburg). We value diversity and welcome applications from people of all backgrounds. We particularly encourage qualified women to apply. Your tasks - Set up and commission a new customized SECM/SECCM system, and manage our established SVET/SIET localized electrochemistry facility - Design, fabricate and characterize micro- and nano-electrodes tailored to required experiments using the techniques above - Contribute to ongoing research projects in close collaboration with the principal investigators, while developing and pursuing your own research ideas - Publish your results in leading peer-reviewed journals and present them at international conferences, write project reports - Shape the digital future of our lab by connecting the localized electrochemistry instruments to our electronic lab notebook and establishing FAIR data management - Co-supervise PhD students and help them grow as researchers - Write or contribute to grant proposals and build your own track record in acquiring external funding Your profile - A PhD in electrochemistry, physical chemistry, materials science or a related field - Hands-on experience with SECM (SECCM experience is a strong plus), demonstrated through first-author publications - Experience fabricating micro- or nanoelectrodes for SECM/SECCM - Solid experimental skills in the chemical laboratory and confidence in quantitative data analysis using appropriate software - Experience with the degradation or corrosion of metallic materials, especially light metals (experience with biodegradable metals or metallic medical devices is a strong plus) - Fluent written and spoken English is required, knowledge of the German language is preferred but not mandatory, we support language learning Content-related enquiries regarding this position can be directed to Sviatlana.Lamaka@hereon.de. Our offer - Access to state-of-the-art (robotic) labs, unique scientific and technical infrastructure - Access to a large international research and industrial network. - Funding for conferences, summer schools and courses needed or research stays - An exciting job in a research center with around 1,000 employees from more than 60 nations - International Welcome Office with guest accommodation - 6 weeks holiday per year; company holidays between Christmas and New Year's Day - social benefits according to the collective agreement of the public service and remuneration up to EG 13 (according to EntgO Bund) - Very good work-life balance; options for mobile and flexible work - A green campus on the Elbe River, well-connected with Hamburg (public transport), subsidy for the Deutschlandticket if certain conditions are met (job ticket), charging facilities for electric vehicles - Family-friendly company policy with childcare facilities, e. g. nursery/kindergarten close to the company - Operational Health Management, e. g. Employee Assistance Program (EAP) - Corporate Benefits - A varied offer in the canteen on campus Severely disabled persons and those equaling severely disabled persons who are equally suitable for the position will be considered preferentially within the framework of legal requirements. Interested? Then we are looking forward to receiving your comprehensive application documents (cover letter, CV, transcripts, certificates, etc.) indicating the reference number 1082 ? 2026/MO 5 until 25 November, 2026. Apply now! https://jobs2.hereon.de/job/Postdoctoral-Researcher-Localized-Electrochemistry%2C-SECM%2C-for-Unraveling-Degradation-of-Light-Metals/1082-en_US/",
+    "eligibility": "restricted",
+    "eligibility_conditions": [
+      "Confirm degree completion and start-date flexibility with the employer"
+    ],
+    "eligibility_evidence": [
+      "Completed doctorate required; profile has no completed PhD",
+      "Confirm degree completion and start-date flexibility with the employer"
+    ],
+    "eligible_nationalities": "unknown",
+    "first_discovered": "2026-11-07T20:32:09.988314+00:00",
+    "fully_funded_verified": false,
+    "funding_amount": null,
+    "funding_currency": null,
+    "funding_evidence": "llective agreement of the public service and remuneration up to EG 13 (according to EntgO Bund) - Very good work-life balance; options for mobile and flexible work - A green campus on the Elbe River, well-connected with Hamburg (public transport), subsidy for the Deutschlandti",
+    "funding_level": "paid",
+    "funding_status": "funded",
+    "funding_verified": true,
+    "geographic_scope": [
+      "Europe"
+    ],
+    "graduation_compatibility": "needs_confirmation",
+    "host_continent": "Europe",
+    "host_country": "Germany",
+    "id": "0f9684968071c568c511",
+    "identity_urls": [
+      "https://www.hereon.de/career/vacancies/030981/index.php.en"
+    ],
+    "intake": "unknown",
+    "last_updated": "2026-11-07T20:32:09.988314+00:00",
+    "last_verified": "2026-11-25T21:42:23.620749+00:00",
+    "link_validation": "Source supplied URL; individual link not yet checked",
+    "location": "Geesthacht, Germany",
+    "organization": "Helmholtz-Zentrum Hereon",
+    "original_url": "https://www.hereon.de/career/vacancies/030981/index.php.en",
+    "provenance": {
+      "deadline": "Hereon CLOSING_DATE: 25.11.2026; description: Application deadline: 25 November, 2026 [exact time and timezone not verified]",
+      "listing": "https://www.hereon.de/innovation_transfer/communication_media/rss/rss_jobs_helmholtz.en.xml"
+    },
+    "recommendation_group": "doctoral",
+    "recommendation_score": 30,
+    "relevance_explanation": [
+      "Profile skills mentioned: materials science",
+      "Research interests mentioned: health",
+      "Aligned research themes: scientific_materials",
+      "Career category: research; eligibility: restricted",
+      "Score is prioritization, not an acceptance probability",
+      "Doctoral research is a primary career goal",
+      "Confirm the listed eligibility and availability conditions before applying"
+    ],
+    "relevance_score": 30,
+    "remote": "unknown",
+    "required_qualifications": "PhD",
+    "required_skills": "unknown",
+    "review_conflicts": [],
+    "review_sources": [
+      "https://www.hereon.de/career/vacancies/030981/index.php.en",
+      "https://www.hereon.de/innovation_transfer/communication_media/rss/rss_jobs_helmholtz.en.xml"
+    ],
+    "review_status": "",
+    "reviewed_at": "2026-11-25T21:42:23.620749+00:00",
+    "salary": "unknown",
+    "scholarship_information": "unknown",
+    "skills_not_demonstrated": [
+      "health"
+    ],
+    "source_category": "PhD",
+    "source_id": "hereon-research",
+    "source_name": "Hereon doctoral and research positions",
+    "start_date": null,
+    "startup_requirements": "not applicable",
+    "subcategory": "PhD",
+    "tags": [
+      "health",
+      "materials science"
+    ],
+    "title": "Postdoctoral Researcher: Localized Electrochemistry, SECM, for Unraveling Degradation of Light Metals"
+  },
+  {
+    "applicant_coverage": "unknown",
+    "application_opening_date": null,
+    "application_status": "unknown",
+    "application_url": "https://recruitment.jrc.ec.europa.eu/vacancy/3330",
+    "assessment": {
+      "conditions": [
+        "Nationality, qualifications and intended start date require organizer confirmation"
+      ],
+      "qualifications": "phy Education Level PhD or equivalent Skills/Qualifications We seek a motivated and dynamic researcher with a strong quantitative profile, and experience socio-economic and territorial (i.e. sub-national) analysis research, data and methods. You must demonstrate (essential): • A"
+    },
+    "category": "industry",
+    "deadline": "2026-11-25T22:59:00+00:00",
+    "deadline_evidence": "EURAXESS Application Deadline: 25 Nov 2026 - 23:59 (Europe/Rome); datetime=2026-11-25T22:59:00+00:00",
+    "deadline_precision": "timestamp",
+    "deadline_status": "Expired",
+    "deadline_timezone": "Europe/Rome",
+    "description": "4 Nov 2026 Job Information Organisation/Company European Commission - Joint Research Centre Department Joint Research Centre Research Field Geography » Economic geography Economics » Tourism studies Economics » Econometrics Geography » Regional geography Researcher Profile Recognised Researcher (R2) Positions Postdoc Positions Application Deadline 25 Nov 2026 - 23:59 (Europe/Rome) Country Italy Type of Contract Temporary Job Status Part-time Hours Per Week 40 Offer Starting Date 1 Feb 2027 Is the job funded through the EU Research Framework Programme? Horizon Europe Is the Job related to staff position within a Research Infrastructure? No Offer Description The Joint Research Centre (JRC) provides independent, evidence-based knowledge and science, supporting EU policies to positively impact society. The current vacancy is in the Territorial Development Unit within the Fair and Sustainable Economy Directorate of the JRC. Our mission is to support the territorial articulation of the EU policy agenda, its external investment and global outreach. Our aim is to deliver world-class science-for-policy support to bring Europe closer to citizens and places, turning territorial diversity into value. We aim at strengthening the EU global role in putting forward place-based solutions for recovery and sustainability and localising global agendas, bringing back to Europe what we learn from outside. We build on a unique combination of knowledge, data, methods, analytical and modelling tools as well as extensive links to urban, local, rural, regional, national and international stakeholders, authorities and communities. The successful candidate will undertake predominantly quantitative and territorial analyses and research with a focus on housing and tourism, but potentially contribute to other areas of relevance to EU regional policy and investments, such as demographic change, regional and sectoral economic trends, transport, urban and rural development. This role demands excellent analytical and communication skills, and active collaboration with various teams within the unit, diverse units across the JRC, and several of the European Commission’s policy Directorates-General (DGs), as well as external stakeholders. The selected candidate will: • Contribute to on-going research and policy support projects of the unit by carrying out data collection, processing and analysis, developing and maintaining indicators, analyse trends and patterns; • Author and co-author technical, scientific and science for policy publications; • Collaborate with colleagues within the unit, across the JRC and other Commission services and external partners; • Gain access and analyse large statistical and spatial data sets for the EU and neighbouring European countries; • Present and discuss policy-relevant analyses and research findings to high-level policymakers and scientific forums; • Suggest new research questions, opportunities for further policy-relevant analysis and potentially develop new streams of work. This position offers a unique opportunity to provide high-quality scientific input to support the territorial dimension of EU policies, ensuring high policy impact. The selected candidate will have the chance to collaborate with a number of Commission DGs, international organisations, national, regional and local authorities, academia and other relevant public and private actors and their intermediaries. Where to apply Website https://recruitment.jrc.ec.europa.eu/vacancy/3330 Requirements Research Field Geography » Economic geography Education Level PhD or equivalent Skills/Qualifications We seek a motivated and dynamic researcher with a strong quantitative profile, and experience socio-economic and territorial (i.e. sub-national) analysis research, data and methods. You must demonstrate (essential): • A Ph.D. or at least 3 years of proven experience in research and analysis in one or more of the following areas: housing, tourism, regional or urban economics, economic geography, regional and urban development, transport, demography, urban or rural studies, data science, geospatial analysis or other related fields; • Good command of state-of-the-art methods, techniques and software for statistical data processing and analysis; • Excellent drafting and presentation (including data visualization) skills for technical and non-technical audiences; • A very good knowledge (C1) of English. A combination of the following knowledge, experience and skills will be considered an advantage (desirable): • Academic, peer-reviewed publications on relevant topics; • Knowledge of sources of national and/or European sub-national data of relevance for analysis of socioeconomic development, housing or tourism, and experience with working with large datasets for spatial and/or statistical analysis; • Experience with econometric or other relevant techniques (e.g., machine learning) for inference, causal inference, prediction, scenario modelling; • Experience with software for statistical analyses (preferably R, Stata, SAS, SPSS or equivalent), programming languages for data processing and analyses (such as Python or R), Geographical Information Systems (such as QGIS or ArcGIS); • Knowledge of one or more of the following EU policies: affordable housing, sustainable tourism, regional and urban policy. Languages ENGLISH Level Excellent Additional Information Work Location(s) Number of offers available 1 Company/Institute Joint Research Centre Country Italy City Ispra Street Via Enrico Fermi Geofield Contact City Ispra Website https://joint-research-centre.ec.europa.eu/index_en Street Via Enrico Fermi E-Mail paolo.canfora@ec.europa.eu STATUS: EXPIRED Apply now Share this page",
+    "eligibility": "unknown",
+    "eligibility_conditions": [
+      "Nationality, qualifications and intended start date require organizer confirmation"
+    ],
+    "eligibility_evidence": [
+      "Nationality, work authorization and start-date requirements must be checked with the organizer",
+      "Nationality, qualifications and intended start date require organizer confirmation"
+    ],
+    "eligible_nationalities": "unknown",
+    "first_discovered": "2026-11-19T20:37:28.426452+00:00",
+    "fully_funded_verified": false,
+    "funding_amount": null,
+    "funding_currency": null,
+    "funding_evidence": "",
+    "funding_level": "unknown",
+    "funding_status": "unknown",
+    "funding_verified": false,
+    "geographic_scope": [
+      "Europe"
+    ],
+    "graduation_compatibility": "not_applicable",
+    "host_continent": "Europe",
+    "host_country": "Italy",
+    "id": "4df2d2e09544c07ffa78",
+    "intake": "unknown",
+    "last_updated": "2026-11-19T20:37:28.426452+00:00",
+    "last_verified": "2026-11-19T20:37:28.426452+00:00",
+    "link_validation": "HTTP GET succeeded; opportunity detail parsed 2026-11-19T20:37:28.426452+00:00",
+    "location": "Italy",
+    "organization": "European Commission - Joint Research Centre",
+    "original_url": "https://euraxess.ec.europa.eu/jobs/477814",
+    "provenance": {
+      "deadline": "EURAXESS Application Deadline: 25 Nov 2026 - 23:59 (Europe/Rome); datetime=2026-11-25T22:59:00+00:00",
+      "listing": "https://euraxess.ec.europa.eu/job-feed"
+    },
+    "recommendation_group": "industry",
+    "recommendation_score": 61,
+    "relevance_explanation": [
+      "Profile skills mentioned: machine learning, python",
+      "Research interests mentioned: sustainability",
+      "Aligned research themes: ai_research, energy_sustainability",
+      "Career category: industry; eligibility: unknown",
+      "Score is prioritization, not an acceptance probability",
+      "Confirm the listed eligibility and availability conditions before applying"
+    ],
+    "relevance_score": 61,
+    "remote": "unknown",
+    "required_qualifications": "phy Education Level PhD or equivalent Skills/Qualifications We seek a motivated and dynamic researcher with a strong quantitative profile, and experience socio-economic and territorial (i.e. sub-national) analysis research, data and methods. You must demonstrate (essential): • A",
+    "required_skills": "unknown",
+    "review_conflicts": [],
+    "review_sources": [
+      "https://euraxess.ec.europa.eu/jobs/477814"
+    ],
+    "review_status": "",
+    "reviewed_at": "2026-11-19T20:37:28.426452+00:00",
+    "salary": "unknown",
+    "scholarship_information": "unknown",
+    "skills_not_demonstrated": [
+      "sustainability"
+    ],
+    "source_category": "",
+    "source_id": "euraxess",
+    "source_name": "EURAXESS research jobs",
+    "start_date": null,
+    "startup_requirements": "not applicable",
+    "subcategory": "job",
+    "tags": [
+      "machine learning",
+      "python",
+      "sustainability"
+    ],
+    "title": "Project Officer - Statistical and Regional Scientist"
+  },
+  {
+    "applicant_coverage": "unknown",
+    "application_opening_date": null,
+    "application_status": "unknown",
+    "application_url": "https://universitat-siegen.contactrh.com/jobs/13808/44551311/en_PH",
+    "assessment": {
+      "conditions": [
+        "Nationality, qualifications and intended start date require organizer confirmation"
+      ],
+      "qualifications": "S in 2029 Your profile: A university degree (master’s degree or equivalent) in computer science or a related discipline Very good programming skills and good knowledge of computer graphics and/or computer vision, as well as mathematical modelling Experience with physics-"
+    },
+    "category": "research",
+    "deadline": "2026-11-25T22:59:59+00:00",
+    "deadline_evidence": "EURAXESS Application Deadline: 25 Nov 2026 - 22:59 (UTC); datetime=2026-11-25T22:59:59+00:00",
+    "deadline_precision": "timestamp",
+    "deadline_status": "Expired",
+    "deadline_timezone": null,
+    "description": "5 Nov 2026 Job Information Organisation/Company Universität Siegen Research Field Computer science » Informatics Researcher Profile First Stage Researcher (R1) Application Deadline 25 Nov 2026 - 22:59 (UTC) Country Germany Type of Contract Temporary Job Status Part-time Hours Per Week 39.83 Is the job funded through the EU Research Framework Programme? Not funded by a EU programme Is the Job related to staff position within a Research Infrastructure? No Offer Description Area: Faculty IV: School of Science and Technology | Job scope: full-time | Duration of employment : limited | Posting-ID: 7205 The University of Siegen is a modern university with an international orientation and a focus on interdisciplinary research. It currently has around 14,000 students and covers a range of research fields from the humanities, social and economic sciences to natural sciences, engineering and life sciences. With over 2,000 employees, the university is one of the largest employers in the region and offers a unique environment for teaching, study, research and knowledge transfer. We seek: In the Faculty IV: School of Science and Technology, ET-I / Computergraphik, we are looking for a researcher as of the next possible date at the following conditions: 100% = 39,83 hours Pay grade 13 TV-L limited by 31.12.2029 Your tasks: The Chair of Computer Graphics and Multimedia Systems investigates data-driven and model-based methods for processing, simulating, and representing sensor, camera, and scene data. In research project “Enablement & Governance for Model-Driven Data Preparation (wAIve)”, we develop novel methods for sensor-based inspection and quality assurance in industrial production. We are seeking a doctoral researcher to contribute to the project through the following tasks: Develop and implement differentiable simulation models to generate synthetic sensor and camera data for industrial inspection Investigate how material properties, defects, and acquisition conditions affect the performance and robustness of quality assurance methods Develop methods for task-driven optimization of sensor parameters and data acquisition methods, potentially including sampling and compression approaches Evaluate the developed methods using suitable production scenarios and real sensor data in collaboration with the project partners Publish research results, prepare open reference implementations for training and knowledge transfer, and supervise student theses and projects within the scope of the project Teaching obligation: 0,5 SWS in 2027, 1 SWS in 2028, 1,5 SWS in 2029 Your profile: A university degree (master’s degree or equivalent) in computer science or a related discipline Very good programming skills and good knowledge of computer graphics and/or computer vision, as well as mathematical modelling Experience with physics-based or differentiable simulation, numerical optimization, or machine learning is an advantage Interest in independent research and collaboration with industrial application partners Ability to work in a team, with good communication and organizational skills Very good English skills Proficiency in German or a willingness to learn German Our range of services: Promotion of own scientific or artistic qualification according to the Wissenschaftszeitvertragsgesetz [act on temporary employment in higher education] (e.g. PhD) Diverse opportunities to take on responsibility and make a visible contribution in the research and teaching environment A modern understanding of leadership and collaboration Good work-life balance, for example, through flexible working hours and work location, as well as support with child care Extensive personnel development program Health management with a wide range of prevention and counseling services We look forward to receiving your application by 25.11.2026. Please apply exclusively via our job portal ( https://jobs.uni-siegen.de ). Unfortunately, we cannot consider applications in writing or by e-mail. Your contact person: Prof. Dr. Andreas Kolb 0271 / 740-2404 andreas.kolb@uni-siegen.de Equal opportunities and diversity are promoted and embodied at the University of Siegen. The advertisement is explicitly addressed to people of all genders; applications from women will be given special consideration in accordance with the State Equal Opportunities Act. We also welcome applications from people with different personal, social, and cultural backgrounds, people with severe disabilities, and people of equal status. Where to apply Website https://universitat-siegen.contactrh.com/jobs/13808/44551311/en_PH Requirements Additional Information Work Location(s) Number of offers available 1 Company/Institute Universität Siegen Country Germany City Siegen Postal Code 57076 Contact City Siegen Street Adolf-Reichwein-Straße 2a Postal Code 57076 STATUS: EXPIRED Apply now Share this page",
+    "eligibility": "unknown",
+    "eligibility_conditions": [
+      "Nationality, qualifications and intended start date require organizer confirmation"
+    ],
+    "eligibility_evidence": [
+      "Nationality, work authorization and start-date requirements must be checked with the organizer",
+      "Nationality, qualifications and intended start date require organizer confirmation"
+    ],
+    "eligible_nationalities": "unknown",
+    "first_discovered": "2026-11-19T20:37:28.426452+00:00",
+    "fully_funded_verified": false,
+    "funding_amount": null,
+    "funding_currency": null,
+    "funding_evidence": "",
+    "funding_level": "unknown",
+    "funding_status": "unknown",
+    "funding_verified": false,
+    "geographic_scope": [
+      "Europe"
+    ],
+    "graduation_compatibility": "needs_confirmation",
+    "host_continent": "Europe",
+    "host_country": "Germany",
+    "id": "0b1ab1a436f445f1591d",
+    "intake": "unknown",
+    "last_updated": "2026-11-19T20:37:28.426452+00:00",
+    "last_verified": "2026-11-19T20:37:28.426452+00:00",
+    "link_validation": "HTTP GET succeeded; opportunity detail parsed 2026-11-19T20:37:28.426452+00:00",
+    "location": "Germany",
+    "organization": "Universität Siegen",
+    "original_url": "https://euraxess.ec.europa.eu/jobs/477819",
+    "provenance": {
+      "deadline": "EURAXESS Application Deadline: 25 Nov 2026 - 22:59 (UTC); datetime=2026-11-25T22:59:59+00:00",
+      "listing": "https://euraxess.ec.europa.eu/job-feed"
+    },
+    "recommendation_group": "research",
+    "recommendation_score": 80,
+    "relevance_explanation": [
+      "Profile skills mentioned: data acquisition, machine learning, simulation",
+      "Research interests mentioned: computer vision, health",
+      "Aligned research themes: ai_research, engineering_systems",
+      "Career category: research; eligibility: unknown",
+      "Score is prioritization, not an acceptance probability",
+      "Confirm the listed eligibility and availability conditions before applying"
+    ],
+    "relevance_score": 71,
+    "remote": "unknown",
+    "required_qualifications": "S in 2029 Your profile: A university degree (master’s degree or equivalent) in computer science or a related discipline Very good programming skills and good knowledge of computer graphics and/or computer vision, as well as mathematical modelling Experience with physics-",
+    "required_skills": "unknown",
+    "review_conflicts": [],
+    "review_sources": [
+      "https://euraxess.ec.europa.eu/jobs/477819"
+    ],
+    "review_status": "",
+    "reviewed_at": "2026-11-19T20:37:28.426452+00:00",
+    "salary": "unknown",
+    "scholarship_information": "unknown",
+    "skills_not_demonstrated": [
+      "computer vision",
+      "health"
+    ],
+    "source_category": "",
+    "source_id": "euraxess",
+    "source_name": "EURAXESS research jobs",
+    "start_date": null,
+    "startup_requirements": "not applicable",
+    "subcategory": "research",
+    "tags": [
+      "computer vision",
+      "data acquisition",
+      "health",
+      "machine learning",
+      "simulation"
+    ],
+    "title": "Researcher - Computer Graphics"
+  },
+  {
+    "applicant_coverage": "unknown",
+    "application_opening_date": null,
+    "application_status": "unknown",
+    "application_url": "https://cockpit.as-mediendesign.de/jump1/134186",
+    "assessment": {
+      "conditions": [
+        "Nationality, qualifications and intended start date require organizer confirmation"
+      ],
+      "qualifications": "Confirm qualifications in the original announcement"
+    },
+    "category": "research",
+    "deadline": "2026-11-25T22:59:59+00:00",
+    "deadline_evidence": "EURAXESS Application Deadline: 25 Nov 2026 - 23:59 (Europe/Berlin); datetime=2026-11-25T22:59:59+00:00",
+    "deadline_precision": "timestamp",
+    "deadline_status": "Expired",
+    "deadline_timezone": "Europe/Berlin",
+    "description": "30 Oct 2026 Job Information Organisation/Company Helmholtz Zentrum Hereon Research Field Physics Researcher Profile Other Profession Positions Postdoc Positions Application Deadline 25 Nov 2026 - 23:59 (Europe/Berlin) Country Germany Type of Contract Temporary Job Status Full-time Is the job funded through the EU Research Framework Programme? Other EU programme Is the Job related to staff position within a Research Infrastructure? No Offer Description Postdoctoral Researcher: Localized Electrochemistry, SECM, for Unraveling Degradation of Light Metals JobID: 1082 – 2026/MO 5 Location: Geesthacht Application deadline: 25 November, 2026 Metal degradation can be a boon or a bane, depending on the application and on how well we can control it. A corroding car component is a safety risk. A biodegradable magnesium implant that dissolves at exactly the right rate spares patients a second surgery. An aqueous battery lives or dies depending on what happens at its electrodes. At the Department of Electrochemistry and Big Data we unravel degradation pathways of light metals used in structural applications, medical devices and aqueous batteries. Since metal degradation is governed by interface reactions, local electrochemical methods, which measure the concentrations of species generated or consumed at the metal/electrolyte interface, provide valuable insight into electrochemical degradation mechanisms. This position is created to employ a talented and motivated scientist able to run local electrochemical measurements using scanning electrochemical microscopy (SECM) and scanning electrochemical cell microscopy (SECCM) . You will investigate how metals degrade in electrolytes ranging from simple model solutions to complex, physiologically relevant media. You will combine commercial and self-made amperometric and potentiometric micro-probes and micro-optodes to separate anodic and cathodic degradation pathways. You will also correlate your electrochemical data with surface chemistry and morphology. We are offering a 3-year position, as soon as possible, as a Post-Doctoral researcher in the field of localized electro­analytical analysis. In principle, the position is full-time (39 h/week) and will be located in Hereon's main campus, in Geesthacht (near Hamburg). We value diversity and welcome applications from people of all backgrounds. We particularly encourage qualified women to apply. Your tasks Set up and commission a new customized SECM/SECCM system, and manage our established SVET/SIET localized electrochemistry facility Design, fabricate and characterize micro- and nano-electrodes tailored to required experiments using the techniques above Contribute to ongoing research projects in close collaboration with the principal investigators, while developing and pursuing your own research ideas Publish your results in leading peer-reviewed journals and present them at international conferences, write project reports Shape the digital future of our lab by connecting the localized electrochemistry instruments to our electronic lab notebook and establishing FAIR data management Co-supervise PhD students and help them grow as researchers Write or contribute to grant proposals and build your own track record in acquiring external funding Your profile A PhD in electrochemistry, physical chemistry, materials science or a related field Hands-on experience with SECM (SECCM experience is a strong plus), demonstrated through first-author publications Experience fabricating micro- or nanoelectrodes for SECM/SECCM Solid experimental skills in the chemical laboratory and confidence in quantitative data analysis using appropriate software Experience with the degradation or corrosion of metallic materials, especially light metals (experience with biodegradable metals or metallic medical devices is a strong plus) Fluent written and spoken English is required, knowledge of the German language is preferred but not mandatory, we support language learning Content-related enquiries regarding this position can be directed to Sviatlana.Lamaka@hereon.de . Our offer Access to state-of-the-art (robotic) labs, unique scientific and technical infrastructure Access to a large international research and industrial network. Funding for conferences, summer schools and courses needed or research stays An exciting job in a research center with around 1,000 employees from more than 60 nations International Welcome Office with guest accommodation 6 weeks holiday per year; company holidays between Christmas and New Year's Day social benefits according to the collective agreement of the public service and remuneration up to EG 13 (according to EntgO Bund) Very good work-life balance; options for mobile and flexible work A green campus on the Elbe River, well-connected with Hamburg (public transport), subsidy for the Deutschlandticket if certain conditions are met (job ticket), charging facilities for electric vehicles Family-friendly company policy with childcare facilities, e. g. nursery/kindergarten close to the company Operational Health Management, e. g. Employee Assistance Program (EAP) Corporate Benefits A varied offer in the canteen on campus Helmholtz-Zentrum Hereon The Helmholtz-Zentrum Hereon conducts cutting-edge international research for a changing world: Around 1,000 employees contribute to the tackling of climate change, the sustainable use of the world's coastal systems and the resource-compatible enhancement of the quality of life. From fundamental research to practical applications, the interdisciplinary research spectrum covers a unique range. Institute of Surface Science The Institute of Surface Science specializes in the development of corrosion protection concepts and functional coatings that meet the requirements of future applications from the fields of structural lightweight construction, energy research and medical technology. The experimental development is closely accompanied by modelling approaches and artificial intelligence methods. Interested? Then we are looking forward to receiving your comprehensive application documents (cover letter, CV, transcripts, certificates, etc.) indicating the reference number 1082 – 2026/MO 5 until 25 November, 2026. Apply now Severely disabled persons and those equaling severely disabled persons who are equally suitable for the position will be considered preferentially within the framework of legal requirements. Where to apply Website https://cockpit.as-mediendesign.de/jump1/134186 Requirements Research Field Physics Education Level PhD or equivalent Additional Information Work Location(s) Number of offers available 1 Company/Institute Helmholtz-Zentrum Hereon Country Germany Geofield Contact City Geesthacht Website https://www.hereon.de/ Street Max-Planck-Straße 1 Postal Code 21502 STATUS: EXPIRED Apply now Share this page",
+    "eligibility": "restricted",
+    "eligibility_conditions": [
+      "Nationality, qualifications and intended start date require organizer confirmation"
+    ],
+    "eligibility_evidence": [
+      "Completed doctorate required; profile has no completed PhD",
+      "Nationality, qualifications and intended start date require organizer confirmation"
+    ],
+    "eligible_nationalities": "unknown",
+    "first_discovered": "2026-11-14T06:23:56.528275+00:00",
+    "fully_funded_verified": false,
+    "funding_amount": null,
+    "funding_currency": null,
+    "funding_evidence": "",
+    "funding_level": "unknown",
+    "funding_status": "unknown",
+    "funding_verified": false,
+    "geographic_scope": [
+      "Europe"
+    ],
+    "graduation_compatibility": "needs_confirmation",
+    "host_continent": "Europe",
+    "host_country": "Germany",
+    "id": "2603a65f4e265bdcf55f",
+    "intake": "unknown",
+    "last_updated": "2026-11-14T06:23:56.528275+00:00",
+    "last_verified": "2026-11-14T06:23:56.528275+00:00",
+    "link_validation": "HTTP GET succeeded; opportunity detail parsed 2026-11-14T06:23:56.528275+00:00",
+    "location": "Germany",
+    "organization": "Helmholtz Zentrum Hereon",
+    "original_url": "https://euraxess.ec.europa.eu/jobs/476524",
+    "provenance": {
+      "deadline": "EURAXESS Application Deadline: 25 Nov 2026 - 23:59 (Europe/Berlin); datetime=2026-11-25T22:59:59+00:00",
+      "listing": "https://euraxess.ec.europa.eu/job-feed"
+    },
+    "recommendation_group": "research",
+    "recommendation_score": 30,
+    "relevance_explanation": [
+      "Profile skills mentioned: artificial intelligence, materials science",
+      "Research interests mentioned: health",
+      "Aligned research themes: ai_research, scientific_materials, energy_sustainability",
+      "Career category: research; eligibility: restricted",
+      "Score is prioritization, not an acceptance probability",
+      "Confirm the listed eligibility and availability conditions before applying"
+    ],
+    "relevance_score": 30,
+    "remote": "unknown",
+    "required_qualifications": "Confirm qualifications in the original announcement",
+    "required_skills": "unknown",
+    "review_conflicts": [],
+    "review_sources": [
+      "https://euraxess.ec.europa.eu/jobs/476524"
+    ],
+    "review_status": "",
+    "reviewed_at": "2026-11-14T06:23:56.528275+00:00",
+    "salary": "unknown",
+    "scholarship_information": "unknown",
+    "skills_not_demonstrated": [
+      "health"
+    ],
+    "source_category": "",
+    "source_id": "euraxess",
+    "source_name": "EURAXESS research jobs",
+    "start_date": null,
+    "startup_requirements": "not applicable",
+    "subcategory": "research",
+    "tags": [
+      "artificial intelligence",
+      "health",
+      "materials science"
+    ],
+    "title": "Postdoctoral Researcher: Localized Electrochemistry, SECM, for Unraveling Degradation of Light Metals"
+  },
+  {
+    "applicant_coverage": "unknown",
+    "application_opening_date": null,
+    "application_status": "unknown",
+    "application_url": "https://university.open.ac.uk/employment/phd-studentship-co-creation-and-adoption-innovation-mission-oriented-ecosystems",
+    "assessment": {
+      "conditions": [
+        "Nationality, qualifications and intended start date require organizer confirmation"
+      ],
+      "qualifications": "ect A CV/resume outlining your most relevant qualifications, professional experience, and any prior research experience Copies of your degree certificates (including translations if not in English) For applicants who are not British/Irish, proof of English language competency. G"
+    },
+    "category": "research",
+    "deadline": "2026-11-25T23:59:59+00:00",
+    "deadline_evidence": "EURAXESS Application Deadline: 25 Nov 2026 - 23:59 (Europe/London); datetime=2026-11-25T23:59:59+00:00",
+    "deadline_precision": "timestamp",
+    "deadline_status": "Expired",
+    "deadline_timezone": "Europe/London",
+    "description": "6 Nov 2026 Job Information Organisation/Company The Open University Department Strategy and Marketing Research Field Management sciences » Other Researcher Profile First Stage Researcher (R1) Positions PhD Positions Application Deadline 25 Nov 2026 - 23:59 (Europe/London) Country United Kingdom Type of Contract Temporary Job Status Full-time Offer Starting Date 1 Feb 2027 Is the job funded through the EU Research Framework Programme? Horizon Europe Reference Number 101270865 Is the Job related to staff position within a Research Infrastructure? No Offer Description The OU's Department of Strategy and Marketing is inviting applications for a fully funded PhD studentship for a project entitled: Co-creation and the Adoption of Innovation in Mission-Oriented Ecosystems. This studentship is embedded within SOLILA, a 54-month Horizon Europe project involving 39 partners and supporting the EU Mission ‘A Soil Deal for Europe’. SOLILA addresses the deterioration of European soils and asks a practical question: how can effective soil-health solutions move from development into sustained use? The project will investigate how innovation strategies, ecosystem structures and policy interventions shape the adoption, scaling and long-term sustainability of innovations developed in mission-oriented settings. For further information, please read the full project description . Funding information A 3-year studentship is available which will be allocated on the basis of eligibility and merit. The studentship covers all course fees and provides and annual stipend of at least £21,805 per annum. Funded students will also be provided with a research training and support grant of up to £6,000. How to apply Applications close at midday on 25 November 2026 with interviews taking place 10 December 2026. To apply you must complete the online application form , as part of which you will be asked to upload: A cover letter outlining why you wish to apply and why you are suited to this project A CV/resume outlining your most relevant qualifications, professional experience, and any prior research experience Copies of your degree certificates (including translations if not in English) For applicants who are not British/Irish, proof of English language competency. Generative AI : The use of generative AI in producing any part of your application is strictly prohibited. For academic queries, please contact the project lead named in the detailed project description. For administrative queries or support, please contact Graduate-School@open.ac.uk or telephone +44 (0) 1908 653806 (Mon-Fri 09:00 – 16:30) Where to apply Website https://university.open.ac.uk/employment/phd-studentship-co-creation-and-adopti… Requirements Research Field Management sciences » Other Education Level Master Degree or equivalent Skills/Qualifications Applicants should hold a masters degree in a relevant subject area. Applicants who do not hold a masters may be considered for entry, provided they have sufficient prior research experience and hold at least an upper second class honours degree. Degrees from outside the UK will be assessed according to the UK ENIC framework. Applicants who are not UK or Irish citizens must demonstrate their English language competency (see International research student applications for further details) Languages ENGLISH Level Good Additional Information Eligibility criteria Applicants should hold a masters degree in a relevant subject area. Applicants who do not hold a masters may be considered for entry, provided they have sufficient prior research experience and hold at least an upper second class honours degree. Degrees from outside the UK will be assessed according to the UK ENIC framework. Applicants who are not UK or Irish citizens must demonstrate their English language competency (see International research student applications for further details) Selection process See this webpage: MPhil and PhD Application | Research | Open University Website for additional job details https://university.open.ac.uk/employment/phd-studentship-co-creation-and-adopti… Work Location(s) Number of offers available 1 Company/Institute Open University Country United Kingdom State/Province Buckinghamshire City Milton Keynes Postal Code MK76AA Street Walton Hall Geofield Contact State/Province Buckinghamshire City Milton Keynes Website https://www.open.ac.uk/ Street Walton Hall Postal Code MK76AA STATUS: EXPIRED Apply now Share this page",
+    "eligibility": "unknown",
+    "eligibility_conditions": [
+      "Nationality, qualifications and intended start date require organizer confirmation"
+    ],
+    "eligibility_evidence": [
+      "Nationality, work authorization and start-date requirements must be checked with the organizer",
+      "Nationality, qualifications and intended start date require organizer confirmation"
+    ],
+    "eligible_nationalities": "unknown",
+    "first_discovered": "2026-11-21T19:16:02.986374+00:00",
+    "fully_funded_verified": false,
+    "funding_amount": null,
+    "funding_currency": null,
+    "funding_evidence": "",
+    "funding_level": "unknown",
+    "funding_status": "funded",
+    "funding_verified": false,
+    "geographic_scope": [
+      "Europe"
+    ],
+    "graduation_compatibility": "needs_confirmation",
+    "host_continent": "Europe",
+    "host_country": "United Kingdom",
+    "id": "12d99706465b020dc34a",
+    "intake": "unknown",
+    "last_updated": "2026-11-21T19:16:02.986374+00:00",
+    "last_verified": "2026-11-21T19:16:02.986374+00:00",
+    "link_validation": "HTTP GET succeeded; opportunity detail parsed 2026-11-21T19:16:02.986374+00:00",
+    "location": "United Kingdom",
+    "organization": "The Open University",
+    "original_url": "https://euraxess.ec.europa.eu/jobs/478593",
+    "provenance": {
+      "deadline": "EURAXESS Application Deadline: 25 Nov 2026 - 23:59 (Europe/London); datetime=2026-11-25T23:59:59+00:00",
+      "listing": "https://euraxess.ec.europa.eu/job-feed"
+    },
+    "recommendation_group": "doctoral",
+    "recommendation_score": 83,
+    "relevance_explanation": [
+      "Profile skills mentioned: none",
+      "Research interests mentioned: generative ai, health, sustainability",
+      "Aligned research themes: energy_sustainability, engineering_systems",
+      "Career category: research; eligibility: unknown",
+      "Score is prioritization, not an acceptance probability",
+      "Doctoral research is a primary career goal",
+      "Confirm the listed eligibility and availability conditions before applying"
+    ],
+    "relevance_score": 71,
+    "remote": "unknown",
+    "required_qualifications": "ect A CV/resume outlining your most relevant qualifications, professional experience, and any prior research experience Copies of your degree certificates (including translations if not in English) For applicants who are not British/Irish, proof of English language competency. G",
+    "required_skills": "unknown",
+    "review_conflicts": [],
+    "review_sources": [
+      "https://euraxess.ec.europa.eu/jobs/478593"
+    ],
+    "review_status": "",
+    "reviewed_at": "2026-11-21T19:16:02.986374+00:00",
+    "salary": "unknown",
+    "scholarship_information": "unknown",
+    "skills_not_demonstrated": [
+      "generative ai",
+      "health",
+      "sustainability"
+    ],
+    "source_category": "",
+    "source_id": "euraxess",
+    "source_name": "EURAXESS research jobs",
+    "start_date": null,
+    "startup_requirements": "not applicable",
+    "subcategory": "PhD",
+    "tags": [
+      "generative ai",
+      "health",
+      "sustainability"
+    ],
+    "title": "PhD Studentship: Co-creation and the Adoption of Innovation in Mission-Oriented Ecosystems"
   }
 ]
